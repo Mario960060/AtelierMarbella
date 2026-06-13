@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($ids = @\\('1600596542815-ffad4c1539a9','1416879595882-3373a0480b5b','1500382017468-9049fed747ef','1559827260-dc66d52bef19','1512917774080-9991f1c4c750'\\); foreach \\($id in $ids\\) { try { $r = Invoke-WebRequest -Uri \"https://images.unsplash.com/photo-$id?w=100\" -Method Head -UseBasicParsing -TimeoutSec 15; Write-Output \"$id => $\\($r.StatusCode\\)\" } catch { Write-Output \"$id => FAIL\" } })",
+      "PowerShell(try { $r = Invoke-RestMethod -Uri \"https://unsplash.com/napi/search/photos?query=luxury%20villa%20pool&per_page=6&orientation=landscape\" -TimeoutSec 30 -UseBasicParsing; $r.results | ForEach-Object { Write-Output \\(\"{0} | {1} | {2}\" -f $_.id, $_.urls.raw.Split\\('?'\\)[0], $_.alt_description\\) } } catch { Write-Output \"FAIL: $\\($_.Exception.Message\\)\" })",
+      "WebSearch",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm run *)"
+    ]
+  }
+}

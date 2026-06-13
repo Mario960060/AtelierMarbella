@@ -1,0 +1,769 @@
+{
+  "nav": {
+    "home": "Home",
+    "hard": "Hard Landscaping",
+    "maintenance": "Property Maintenance",
+    "cta": "Get a quote"
+  },
+  "hero": {
+    "eyebrow": "Seventeen years of craft",
+    "locations": "United Kingdom · Ibiza · Costa del Sol",
+    "title1": "Where British craft",
+    "title2": "meets the Mediterranean.",
+    "sub": "For seventeen years we have shaped and cared for some of Britain's finest properties. Today, our craft is at home on Ibiza and the Costa del Sol.",
+    "ctaPrimary": "Get a quote",
+    "ctaSecondary": "Discover our services",
+    "scroll": "Scroll"
+  },
+  "manifesto": {
+    "eyebrow": "Our standard",
+    "line1": "Built like we own it.",
+    "line2": "Kept like we live there.",
+    "body": "Seventeen years of British craft set our standard. The Costa del Sol and Ibiza are where we hold it: one team, from the first sketch to every Friday visit.",
+    "imageAlt": "A finished Costa del Sol stone terrace in golden-hour light",
+    "stats": [
+      { "v": "17", "k": "Years of British craft" },
+      { "v": "3", "k": "Coasts, one team" },
+      { "v": "1", "k": "Team, from sketch to upkeep" }
+    ]
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Two disciplines.",
+    "titleItalic": "One standard.",
+    "hint": "Choose where to begin",
+    "hard": {
+      "word": "Build.",
+      "label": "Hard Landscaping",
+      "desc": "Terraces, pergolas, outdoor kitchens and stonework: single projects, designed and built to last.",
+      "cta": "Enter"
+    },
+    "maintenance": {
+      "word": "Maintain.",
+      "label": "Property Maintenance",
+      "desc": "Gardens, pools, stone care and repairs: one trusted team on a quiet monthly rhythm.",
+      "cta": "Enter"
+    }
+  },
+  "locations": {
+    "eyebrow": "Where we work",
+    "title": "Three coasts. One standard.",
+    "titleLine1": "Three coasts.",
+    "titleLine2": "One standard.",
+    "uk": {
+      "name": "United Kingdom",
+      "desc": "Where it began: seventeen years of refined outdoor craftsmanship."
+    },
+    "ibiza": {
+      "name": "Ibiza",
+      "desc": "Discreet, year-round care for the island's most private estates."
+    },
+    "costa": {
+      "name": "Costa del Sol",
+      "desc": "From Marbella to Sotogrande, complete estate care on the coast."
+    }
+  },
+  "cta": {
+    "title": "Your property, effortless.",
+    "sub": "Tell us about your estate. We will take care of the rest.",
+    "button": "Get a quote"
+  },
+  "footer": {
+    "blurb": "British standards, Mediterranean know-how. One team for everything beyond the walls of the properties we care for.",
+    "explore": "Explore",
+    "services": "Services",
+    "serviceList": [
+      "Gardens & grounds",
+      "Exterior cleaning",
+      "Stone sealing & restoration",
+      "Hard landscaping",
+      "Pool care",
+      "Key holding & inspections"
+    ],
+    "contact": "Contact",
+    "areas": "United Kingdom · Ibiza · Costa del Sol",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice"
+  },
+  "hardPage": {
+    "heroEyebrow": "Hard landscaping, Costa del Sol",
+    "heroTitle": "Stone, shade and water. Built to last.",
+    "heroSub": "We design and build terraces, pergolas, outdoor kitchens and gardens for fine homes all around the world.",
+    "heroAlt": "Seafront stone terrace with pergolas and a pool",
+    "ctaQuote": "Get a quote",
+    "ctaSee": "See what we build",
+    "introTitle": "One project. One team. One standard.",
+    "introBody": "Hard landscaping is the architecture of the garden: the stone underfoot, the walls that hold the hillside, the pergola that throws the shade, the pool that cools the day. We design and build it as a single project, from the first sketch to the final detail.",
+    "servicesEyebrow": "What we build",
+    "servicesTitle": "Everything outdoors, built by one team.",
+    "hotspotCta": "Take a closer look",
+    "typesTitle": "Kinds we build",
+    "backToBuild": "Back to what we build",
+    "craftTitle": "How we build it",
+    "moreTypes": "Other kinds",
+    "backToElement": "Back to {{element}}",
+    "groups": [
+      {
+        "name": "Stone & structure",
+        "items": [
+          {
+            "slug": "terraces",
+            "title": "Terraces, paths & patios",
+            "desc": "Natural stone, porcelain and travertine, laid to outlast the seasons.",
+            "body": "The ground plane sets the tone for everything above it. We cut, lay and finish stone with the precision of interior flooring: outdoors, where sun, salt and winter rain test every joint.",
+            "details": [
+              "Natural stone, porcelain & travertine",
+              "Levelling, drainage & substructure",
+              "Pool surrounds & coping",
+              "Repair & relaying of existing terraces"
+            ],
+            "types": [
+              {
+                "slug": "travertine",
+                "label": "Travertine & natural stone",
+                "phrase": "Cool underfoot in August. Level for decades.",
+                "blurb": "Travertine stays walkable in the height of summer and only looks better with age. We bed every slab on a compacted, drained base and finish the edges by hand.",
+                "marks": [
+                  "Levelled to the millimetre",
+                  "Sealed against sun and salt",
+                  "Laid on proper drainage"
+                ]
+              },
+              {
+                "slug": "white-terraces",
+                "label": "Mediterranean white terraces",
+                "phrase": "Bright by day. Glowing at dusk.",
+                "blurb": "Lime-washed walls and pale stone make the most of Andalusian light. We build them to keep that brightness: honest materials, clean falls, no shortcuts under the surface.",
+                "marks": [
+                  "Breathable, lime-based finishes",
+                  "Falls that shed winter rain",
+                  "Edges and copings finished by hand"
+                ]
+              },
+              {
+                "slug": "flagstone",
+                "label": "Flagstone & crazy paving",
+                "phrase": "Irregular by design. Precise by habit.",
+                "blurb": "Crazy paving only looks effortless when every joint is considered. We cut, fit and point each stone so the pattern flows and the surface stays dead flat.",
+                "marks": [
+                  "Joints pointed to last",
+                  "Each stone cut to fit its neighbour",
+                  "Flat enough for a dining table"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "walls-steps",
+            "title": "Retaining walls & steps",
+            "desc": "Levels, steps and terraced ground that turn a slope into a feature.",
+            "body": "Sloping plots hide the best views. Retaining structures, steps and terraced levels turn an awkward gradient into usable, dramatic outdoor rooms.",
+            "details": [
+              "Structural retaining walls",
+              "Feature steps & landings",
+              "Terraced levels & planters",
+              "Stone cladding & finishes"
+            ],
+            "types": [
+              {
+                "slug": "stairways",
+                "label": "Garden stairways",
+                "phrase": "Every step lands exactly where your foot expects.",
+                "blurb": "A good stairway disappears into the walk. We set risers to a constant rhythm and treads to a generous depth, then light them so the garden carries you up.",
+                "marks": [
+                  "Constant riser rhythm",
+                  "Non-slip, hand-finished treads",
+                  "Ready for integrated lighting"
+                ]
+              },
+              {
+                "slug": "planting-walls",
+                "label": "Terraced planting walls",
+                "phrase": "The wall holds the hill. The planting hides the wall.",
+                "blurb": "Terracing turns a slope into rooms. Our walls are engineered first and beautiful second, with drainage and root space built in from the start.",
+                "marks": [
+                  "Engineered to retain, built to drain",
+                  "Planting pockets from day one",
+                  "Stone faces that age well"
+                ]
+              },
+              {
+                "slug": "sculpted-steps",
+                "label": "Sculpted stone steps",
+                "phrase": "Curves that look poured, built stone by stone.",
+                "blurb": "Rounded steps and flowing walls take patience and good setting-out. We shape them in masonry, render and stone so the geometry stays crisp for years.",
+                "marks": [
+                  "Set out with templates, not by eye",
+                  "Reinforced cores under every curve",
+                  "Render that resists the coast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Living outdoors",
+        "items": [
+          {
+            "slug": "pergolas",
+            "title": "Pergolas & shade structures",
+            "desc": "Pergolas, canopies and awnings made for long Mediterranean afternoons.",
+            "body": "Shade decides where life happens outdoors. Our pergolas and canopies hold their line in coastal wind and full summer sun, year after year.",
+            "details": [
+              "Timber & aluminium pergolas",
+              "Bioclimatic louvred roofs",
+              "Awnings & sail shades",
+              "Frameworks for climbing plants"
+            ],
+            "types": [
+              {
+                "slug": "climbing-plant",
+                "label": "Climbing-plant pergolas",
+                "phrase": "Built for the bougainvillea it will carry in five years.",
+                "blurb": "A planted pergola is a structure with a future load. We size timbers and fixings for the mature plant, not the first season, and detail every junction to shrug off coastal wind.",
+                "marks": [
+                  "Sized for the mature plant",
+                  "Stainless or galvanised fixings",
+                  "Wires and training built in"
+                ]
+              },
+              {
+                "slug": "evening-lounge",
+                "label": "Evening lounge setups",
+                "phrase": "Where the evening slows down.",
+                "blurb": "Shade by day, atmosphere by night. We combine structure, festoon and low seating walls so the terrace works from siesta to midnight.",
+                "marks": [
+                  "Lighting circuits hidden in the frame",
+                  "Power and speakers pre-wired",
+                  "Furniture-ready floor levels"
+                ]
+              },
+              {
+                "slug": "fire-pit",
+                "label": "Timber fire-pit pergolas",
+                "phrase": "Warm enough for January. Solid enough for forever.",
+                "blurb": "A fire pit stretches the season to twelve months. We build the surround, the seating and the canopy as one piece, with safe clearances designed in.",
+                "marks": [
+                  "Heat-safe clearances designed in",
+                  "Benches built into the structure",
+                  "Timber treated for open air"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "outdoor-kitchens",
+            "title": "Outdoor kitchens & BBQ areas",
+            "desc": "Stone-built kitchens made for real cooking and long evenings outside.",
+            "body": "An outdoor kitchen changes how a house is used. Stone-built counters, integrated grills and honest prep space, made for real cooking rather than show.",
+            "details": [
+              "Masonry kitchens & islands",
+              "Built-in grills & wood-fired ovens",
+              "Stone worktops & storage",
+              "Water, gas & power runs"
+            ],
+            "types": [
+              {
+                "slug": "stone-kitchens",
+                "label": "Stone-built kitchens",
+                "phrase": "A kitchen that will outlive the appliances.",
+                "blurb": "Masonry counters do not warp, fade or wobble. We build in stone and render, then fit the grill, fridge and storage into a structure made to stay.",
+                "marks": [
+                  "Solid masonry, nothing flat-pack",
+                  "Stone worktops cut on site",
+                  "Appliances swappable in an afternoon"
+                ]
+              },
+              {
+                "slug": "covered-terraces",
+                "label": "Covered kitchen terraces",
+                "phrase": "Cook through rain. Cook through August.",
+                "blurb": "A roof over the kitchen doubles the days you use it. We integrate structure, extraction, light and power so cooking outside feels as easy as inside.",
+                "marks": [
+                  "All-weather cooking, all year",
+                  "Light where you actually chop",
+                  "Smoke and heat managed by design"
+                ]
+              },
+              {
+                "slug": "grill-stations",
+                "label": "Compact grill stations",
+                "phrase": "Small footprint. Full menu.",
+                "blurb": "Not every terrace needs an island. A well-planned two-metre station holds the grill, the prep and the storage without crowding the table.",
+                "marks": [
+                  "Everything within one step",
+                  "Built-in storage, no clutter",
+                  "Sized to your terrace, not a catalogue"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "lighting",
+            "title": "Garden lighting",
+            "desc": "Light that flatters the architecture and guides every path.",
+            "body": "After dark, a garden becomes a second stage. We light trees, water and stone discreetly: atmosphere first, fittings invisible.",
+            "details": [
+              "Architectural & tree uplighting",
+              "Path & step lighting",
+              "Pool & water-feature lighting",
+              "Smart scenes & control"
+            ],
+            "types": [
+              {
+                "slug": "path-lighting",
+                "label": "Path & garden lighting",
+                "phrase": "You never see the fitting. You always see the way.",
+                "blurb": "Good path light sits low, warm and shielded. We aim it at stone and planting, never at eyes, so the garden reads beautifully after dark.",
+                "marks": [
+                  "Glare-free, shielded fittings",
+                  "Warm white, never blue",
+                  "Cabling buried and protected"
+                ]
+              },
+              {
+                "slug": "festoon",
+                "label": "Festoon & pergola lights",
+                "phrase": "Party lights, engineered like permanent ones.",
+                "blurb": "Festoon looks casual; ours is fixed properly. Tensioned catenary wires, outdoor-rated cable and dimming that takes the terrace from dinner to dancing.",
+                "marks": [
+                  "Tensioned, sag-free lines",
+                  "Dimmable warm light",
+                  "Rated for coastal weather"
+                ]
+              },
+              {
+                "slug": "uplighting",
+                "label": "Architectural uplighting",
+                "phrase": "Your house, lit like it deserves.",
+                "blurb": "Uplighting turns walls and trees into the night view. We balance angles and intensity so the architecture glows without a single hotspot.",
+                "marks": [
+                  "Angles set at night, on site",
+                  "Trees and façade in balance",
+                  "Scenes you control from your phone"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Water & green",
+        "items": [
+          {
+            "slug": "water-features",
+            "title": "Fountains & water features",
+            "desc": "The sound of water, engineered to run clean and quiet for years.",
+            "body": "Moving water cools the air and softens the noise of the world. We build features that run clean and quiet, with upkeep designed in from the start.",
+            "details": [
+              "Fountains & reflecting pools",
+              "Water walls & spouts",
+              "Pumps, filtration & lighting",
+              "Restoration of existing features"
+            ],
+            "types": [
+              {
+                "slug": "courtyard-fountains",
+                "label": "Courtyard fountains",
+                "phrase": "The sound that makes a courtyard.",
+                "blurb": "A fountain should murmur, not splash the paving. We tune nozzles, depths and pump speed by ear, then hide the filtration where you will never see it.",
+                "marks": [
+                  "Tuned by ear, on site",
+                  "Hidden pumps and filtration",
+                  "Stone that loves water"
+                ]
+              },
+              {
+                "slug": "water-walls",
+                "label": "Modern water walls",
+                "phrase": "A moving wall, quiet as rain.",
+                "blurb": "Water walls live or die on even flow. We machine the weir true, light it from below and design access so maintenance takes minutes, not a project.",
+                "marks": [
+                  "Perfectly even weir flow",
+                  "Lit from within at night",
+                  "Service access designed in"
+                ]
+              },
+              {
+                "slug": "reflecting-pools",
+                "label": "Reflecting pools",
+                "phrase": "Still water. Twice the garden.",
+                "blurb": "A reflecting pool doubles your best view. We build it dead level with a dark interior, a fine overflow edge and filtration sized for stillness.",
+                "marks": [
+                  "Dead level, edge to edge",
+                  "Dark linings for a true mirror",
+                  "Quiet, oversized filtration"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "irrigation",
+            "title": "Irrigation systems",
+            "desc": "Smart watering designed around your planting and local water rules.",
+            "body": "A garden is only as good as its watering. We design zoned, automated irrigation around your planting, and around Andalucía's water rules.",
+            "details": [
+              "Drip & spray zones",
+              "Smart controllers & sensors",
+              "Tanks, pumps & filtration",
+              "Seasonal servicing & repairs"
+            ],
+            "types": [
+              {
+                "slug": "sprinkler-zones",
+                "label": "Lawn sprinkler zones",
+                "phrase": "Every blade watered. Not a drop on the path.",
+                "blurb": "Lawn zones are geometry. We plan head positions for true head-to-head coverage, then balance run times to your soil and Andalucía's watering rules.",
+                "marks": [
+                  "Head-to-head coverage, no dry spots",
+                  "Zoned for sun and shade",
+                  "Schedules within local water rules"
+                ]
+              },
+              {
+                "slug": "pop-up-heads",
+                "label": "Pop-up heads & hardware",
+                "phrase": "Invisible until six in the morning.",
+                "blurb": "Hardware decides whether a system lasts. We fit commercial-grade pop-up heads and valves, flush with the lawn, serviceable without digging.",
+                "marks": [
+                  "Commercial-grade heads and valves",
+                  "Flush with the lawn when down",
+                  "Serviceable without digging"
+                ]
+              },
+              {
+                "slug": "micro-spray",
+                "label": "Bed & border micro-spray",
+                "phrase": "Water at the roots, not on the leaves.",
+                "blurb": "Borders want gentle, precise water. Drip and micro-spray deliver it at soil level, plant by plant, with the filtering and pressure control that keep emitters alive.",
+                "marks": [
+                  "Plant-by-plant delivery",
+                  "Filtered and pressure-regulated",
+                  "Less water, better borders"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "artificial-grass",
+            "title": "Artificial grass",
+            "desc": "Flawless green with zero thirst, fitted to a natural finish.",
+            "body": "Where water is precious, a perfect lawn is engineering. Premium turf on a properly built base: green in August, convincing up close.",
+            "details": [
+              "Premium natural-look turf",
+              "Groundwork & drainage base",
+              "Pet- & child-friendly systems",
+              "Invisible edges & joins"
+            ],
+            "types": [
+              {
+                "slug": "pool-side",
+                "label": "Pool-side turf",
+                "phrase": "Green at the water's edge. All year.",
+                "blurb": "Pool-side turf has to handle splash, sun and bare feet. We use cool-touch premium turf on a drained base, with edges that meet the coping perfectly.",
+                "marks": [
+                  "Cool-touch, barefoot-friendly pile",
+                  "Chlorine and UV resistant",
+                  "Edges fitted to the coping"
+                ]
+              },
+              {
+                "slug": "roof-terraces",
+                "label": "Roof terraces & courtyards",
+                "phrase": "A lawn where a lawn is impossible.",
+                "blurb": "Roofs and courtyards get green without soil or weight problems. We protect the waterproofing, sort the drainage and finish the edges so it reads as a lawn, not a carpet.",
+                "marks": [
+                  "Light, membrane-safe build-up",
+                  "Drainage that protects the roof",
+                  "Invisible perimeter fixing"
+                ]
+              },
+              {
+                "slug": "natural-finish",
+                "label": "Natural-look finishes",
+                "phrase": "Guests will kneel down to check.",
+                "blurb": "The difference is in the details: mixed pile heights, a brushed-in infill and seams you cannot find. From the terrace it is simply a perfect lawn.",
+                "marks": [
+                  "Mixed-tone, multi-height pile",
+                  "Seams you cannot find",
+                  "Brushed and finished by hand"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gates & fencing",
+        "items": [
+          {
+            "slug": "gates",
+            "title": "Estate & driveway gates",
+            "desc": "The first impression of the property, made to work smoothly every day.",
+            "body": "A gate works every day of the year. We build entrances that look effortless and swing, slide and lock without complaint: timber, iron or aluminium.",
+            "details": [
+              "Driveway & pedestrian gates",
+              "Automation & access control",
+              "Timber, iron & aluminium",
+              "Entry pillars & masonry"
+            ],
+            "types": [
+              {
+                "slug": "timber-gates",
+                "label": "Carved timber gates",
+                "phrase": "Joinery first. Decoration second.",
+                "blurb": "A timber gate moves with the seasons; ours are built to allow it. Proper joinery, breathable finishes and hardware set for decades of daily swings.",
+                "marks": [
+                  "Traditional joinery, hidden steel",
+                  "Finishes that feed the timber",
+                  "Hung true, no seasonal rub"
+                ]
+              },
+              {
+                "slug": "iron-gates",
+                "label": "Wrought-iron gates",
+                "phrase": "Heavy where it matters. Effortless where you touch it.",
+                "blurb": "Iron should feel substantial and swing like a door. We balance every leaf, weld clean and galvanise before painting so the coast cannot get a grip.",
+                "marks": [
+                  "Galvanised before painting",
+                  "Balanced to swing one-handed",
+                  "Welds dressed clean"
+                ]
+              },
+              {
+                "slug": "ironwork",
+                "label": "Railings & entrance ironwork",
+                "phrase": "The details guests touch first.",
+                "blurb": "Railings, numbers, letterboxes and lanterns: the small ironwork that finishes an entrance. We match it to the gate so the whole arrival reads as one design.",
+                "marks": [
+                  "Matched to the gate's language",
+                  "Fixed into the masonry, not onto it",
+                  "Primed and painted for salt air"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "fencing",
+            "title": "Fencing & privacy",
+            "desc": "Quiet boundaries that match the architecture, not the catalogue.",
+            "body": "Privacy should not look defensive. We build fences, walls and screens that read as part of the garden: timber slats, rendered masonry, planting that softens every line.",
+            "details": [
+              "Slatted timber & aluminium",
+              "Rendered & stone walls",
+              "Privacy screens & hedging frames",
+              "Finishes matched to the gates"
+            ],
+            "types": [
+              {
+                "slug": "slatted",
+                "label": "Modern slatted fencing",
+                "phrase": "Privacy you can still breathe through.",
+                "blurb": "Slatted screens give privacy without building a wall. We set the spacing for your sightlines, fix invisibly and keep the lines arrow-straight over any terrain.",
+                "marks": [
+                  "Spacing tuned to sightlines",
+                  "Hidden fixings throughout",
+                  "Dead-straight lines on sloping ground"
+                ]
+              },
+              {
+                "slug": "climber-walls",
+                "label": "Walls with climbers",
+                "phrase": "A boundary that flowers.",
+                "blurb": "Masonry for security, planting for softness. We render the wall, build in the wires and choose climbers that thrive on this coast.",
+                "marks": [
+                  "Wires and supports built in",
+                  "Render that takes the climate",
+                  "Climbers chosen for the coast"
+                ]
+              },
+              {
+                "slug": "screens",
+                "label": "Boundary lines & screens",
+                "phrase": "Good fences, invisible from the sunlounger.",
+                "blurb": "Some boundaries should disappear. We run honest, durable lines where they are seen and clever screens where they are not, so the garden feels bigger than the plot.",
+                "marks": [
+                  "Sightlines planned from the terrace",
+                  "Durable, low-upkeep materials",
+                  "Levels handled cleanly on slopes"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "baTitle": "The difference a build makes",
+    "baBody": "Every project starts with a tired space and ends with one the house is proud of.",
+    "baBefore": "Before",
+    "baAfter": "After",
+    "baHint": "Drag to compare",
+    "baNote": "Illustrative image. Photography from our Costa del Sol projects is on its way.",
+    "processEyebrow": "How we work",
+    "processTitle": "From first walk to final stone.",
+    "steps": [
+      {
+        "title": "Consultation",
+        "desc": "We walk the site with you, listen, and understand how you live outdoors."
+      },
+      {
+        "title": "Design & proposal",
+        "desc": "A clear design, material samples and a fixed, transparent quote."
+      },
+      {
+        "title": "The build",
+        "desc": "Our own team builds it: a clean site, a steady schedule, no surprises."
+      },
+      {
+        "title": "Handover & aftercare",
+        "desc": "We hand it over finished, and we stay close to keep it perfect."
+      }
+    ],
+    "areasTitle": "Where we work",
+    "areas": ["Marbella", "Estepona", "Mijas", "Benahavís", "Sotogrande"],
+    "areasNote": "Based on the Costa del Sol. Projects on Ibiza and in the United Kingdom by arrangement.",
+    "ctaTitle": "Tell us what you want to build.",
+    "ctaSub": "Send a few photos of your space and we will come back with ideas and a clear quote.",
+    "back": "Back to home"
+  },
+  "maintenancePage": {
+    "eyebrow": "Our services",
+    "title": "Property Maintenance",
+    "sub": "One trusted team keeping your property immaculate — whether you are there or not.",
+    "introEyebrow": "Care, all year round",
+    "introTitle1": "Five disciplines.",
+    "introTitle2": "One quiet routine.",
+    "introBody": "A great property is never finished — it is looked after. Week after week, season after season, one team covers everything beyond your walls and reports back with photos after every visit.",
+    "categories": [
+      {
+        "title": "Gardens & grounds",
+        "blurb": "The living part of your estate, kept sharp in every season.",
+        "items": [
+          "Lawn mowing, feeding & edging",
+          "Hedge & shrub trimming",
+          "Tree & palm care",
+          "Red palm weevil prevention & treatment",
+          "Seasonal planting & potted displays",
+          "Weeding & mulching",
+          "Irrigation servicing & programming",
+          "Pest & weed control",
+          "Green-waste removal"
+        ]
+      },
+      {
+        "title": "Exterior cleaning",
+        "blurb": "Where a tired property becomes a stunning one again.",
+        "items": [
+          "Pressure washing — terraces, driveways & paths",
+          "Soft-wash façades — render & paint",
+          "Roof & terracotta cleaning",
+          "Calima clean-downs",
+          "Windows & glass balustrades",
+          "Outdoor furniture & fencing"
+        ]
+      },
+      {
+        "title": "Stone & sealing",
+        "blurb": "Protection and shine for the surfaces that define your home.",
+        "items": [
+          "Sealing — travertine, terracotta, stone & paving",
+          "Marble polishing & crystallisation",
+          "Exterior repainting",
+          "Wood & decking treatment"
+        ]
+      },
+      {
+        "title": "Repairs & upkeep",
+        "blurb": "The small fixes that keep a home feeling right.",
+        "items": [
+          "Render patching & touch-up painting",
+          "Re-grouting & re-siliconing",
+          "Gutter & drain clearing — flat roofs",
+          "Gates, locks & minor plumbing",
+          "Irrigation repairs"
+        ]
+      },
+      {
+        "title": "Specialist services",
+        "blurb": "The extras that make ownership effortless.",
+        "items": [
+          "Pool care — chlorine & salt systems",
+          "Flat-roof waterproofing & coatings",
+          "Key holding & property inspections",
+          "Rental changeovers"
+        ]
+      }
+    ],
+    "planEyebrow": "Tailored to you",
+    "planTitle": "Tailored to your home — by the visit, or all year round.",
+    "planBody": "No two properties are alike — a clifftop villa on Ibiza and a golf-side estate in Sotogrande need very different care. So we don't sell packages off a shelf. Some owners call us for a single job — a one-off tidy before guests arrive, a tree taken down, a terrace brought back to life. Others want us there all year, one familiar team quietly keeping everything beyond the walls in order. Either way, we walk your property with you, listen to how you live in it, and tailor everything to your home personally — drawing on the five disciplines above, visit by visit and season by season. The price reflects your home, never a tier; and as your property changes, what we do quietly changes with it.",
+    "planSteps": [
+      {
+        "title": "We visit",
+        "desc": "A walk through your property together — every terrace, every tree."
+      },
+      {
+        "title": "We tailor",
+        "desc": "One visit or a year of care, shaped to exactly what your home needs — nothing more."
+      },
+      {
+        "title": "We care",
+        "desc": "One familiar team and a personal price, whether for a single job or every season."
+      }
+    ],
+    "planCta": "Talk to us",
+    "ctaTitle": "Leave the keys with us.",
+    "ctaSub": "Tell us about your property — we will shape a plan around it.",
+    "ctaButton": "Get a quote",
+    "back": "Back to home"
+  },
+  "contactPage": {
+    "eyebrow": "Get a quote",
+    "title": "Tell us about your project.",
+    "sub": "A few details are all we need to begin. Tell us where your property is and what you have in mind, and the right person from our team will come back to you personally, usually within one working day.",
+    "talkTitle": "Prefer to talk?",
+    "talkSub": "Call, email or message us directly. We answer in English and Spanish.",
+    "email": "Email",
+    "phoneEs": "Spain",
+    "phoneUk": "United Kingdom",
+    "whatsapp": "WhatsApp",
+    "responseTitle": "A reply within one working day",
+    "responseBody": "Every enquiry is read by a person, not a queue. We will be in touch personally to arrange a visit or a call.",
+    "areasLabel": "Where we work",
+    "areas": "Marbella · Estepona · Mijas · Benahavís · Sotogrande",
+    "regionLegend": "Where is the property?",
+    "regions": {
+      "costa": { "name": "Costa del Sol", "note": "Marbella to Sotogrande" },
+      "ibiza": { "name": "Ibiza", "note": "Across the island" },
+      "uk": { "name": "United Kingdom", "note": "Where it all began" }
+    },
+    "serviceLegend": "What can we help with?",
+    "services": {
+      "hard": { "name": "Hard Landscaping", "note": "A project: terraces, pergolas, stonework, pools" },
+      "maintenance": { "name": "Property Maintenance", "note": "Ongoing care: gardens, cleaning, pool, key holding" },
+      "both": { "name": "Both, or not sure yet", "note": "We will help you work it out" }
+    },
+    "nameLabel": "Your name",
+    "namePlaceholder": "First and last name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "phoneLabel": "Phone (optional)",
+    "phonePlaceholder": "+34 …",
+    "messageLabel": "About your property",
+    "messagePlaceholder": "Tell us a little about the property and what you would like done. Photos are welcome once we are in touch.",
+    "submit": "Send request",
+    "privacy": "We use your details only to answer your enquiry. Never shared.",
+    "errors": {
+      "name": "Please tell us your name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please add a short description."
+    },
+    "successTitle": "Thank you, {{name}}.",
+    "successBody": "Your request is on its way. We will come back to you personally within one working day to arrange the next step.",
+    "successFallbackPre": "If your email app did not open, write to us at",
+    "successAnother": "Send another message",
+    "back": "Back to home"
+  }
+}
