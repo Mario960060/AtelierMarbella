@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import PageShell from '../components/PageShell';
 import { EASE, Reveal } from '../components/Reveal';
-import { ELEMENT_TYPES } from '../lib/images';
+import { ELEMENT_TYPES, typeFallback, typeGallery } from '../lib/images';
+import { imgFallback } from '../lib/imgFallback';
 
 type TypeEntry = {
   slug: string;
@@ -41,9 +42,14 @@ export default function TypePage() {
   }
 
   const entry = item.types[typeIndex];
-  // All gallery frames are crops of this one verified photo for now — swap
-  // each src for a real project photo of this kind when available.
-  const photo = photos[typeIndex];
+  // Real per-subcategory gallery when we have it ([0] hero, rest fill the grid);
+  // otherwise a single placeholder, shown as crops below until real shots land.
+  const gallery = typeGallery(slug!, type!, typeIndex);
+  const fallback = typeFallback(slug!, typeIndex);
+  const hero = gallery[0] ?? photos[typeIndex];
+  const detailShots = gallery.slice(1);
+  const hasGallery = detailShots.length > 0;
+  const photo = hero;
   const siblings = item.types.filter((sibling) => sibling.slug !== entry.slug);
 
   return (
@@ -51,8 +57,9 @@ export default function TypePage() {
       <div className="bg-limestone font-body text-ink">
         <section className="relative flex h-[56vh] min-h-[400px] items-end overflow-hidden">
           <motion.img
-            src={photo}
+            src={hero}
             alt={entry.label}
+            onError={imgFallback(fallback)}
             initial={{ scale: 1.08 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.3, ease: EASE }}
@@ -78,55 +85,74 @@ export default function TypePage() {
           </Reveal>
         </section>
 
-        {/* Gallery: four crops of the same photo until real project shots land */}
+        {/* Gallery: distinct project shots when we have them; otherwise crops of
+            the single placeholder until real photos for this kind land. */}
         <section className="px-6 pb-20 lg:px-12 lg:pb-28">
-          <div className="grid gap-6 md:grid-cols-2">
-            <Reveal className="md:col-span-2">
-              <div className="overflow-hidden bg-plaster">
-                <img
-                  src={photo}
-                  alt={entry.label}
-                  className="aspect-[21/9] w-full object-cover"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <div className="overflow-hidden bg-plaster">
-                <img
-                  src={photo}
-                  alt=""
-                  aria-hidden
-                  loading="lazy"
-                  className="aspect-[4/5] w-full scale-[1.7] object-cover"
-                  style={{ objectPosition: '24% 70%' }}
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.14}>
-              <div className="overflow-hidden bg-plaster">
-                <img
-                  src={photo}
-                  alt=""
-                  aria-hidden
-                  loading="lazy"
-                  className="aspect-[4/5] w-full scale-[2.3] object-cover"
-                  style={{ objectPosition: '72% 32%' }}
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.2} className="md:col-span-2">
-              <div className="overflow-hidden bg-plaster">
-                <img
-                  src={photo}
-                  alt=""
-                  aria-hidden
-                  loading="lazy"
-                  className="aspect-[16/7] w-full scale-[1.35] object-cover"
-                  style={{ objectPosition: '50% 85%' }}
-                />
-              </div>
-            </Reveal>
-          </div>
+          {hasGallery ? (
+            <div className="grid gap-6 md:grid-cols-2">
+              {detailShots.map((src, i) => (
+                <Reveal
+                  key={src}
+                  delay={0.08 + i * 0.06}
+                  className={i === 0 ? 'md:col-span-2' : ''}
+                >
+                  <div className="overflow-hidden bg-plaster">
+                    <img
+                      src={src}
+                      alt={`${entry.label} — ${i + 1}`}
+                      loading="lazy"
+                      onError={imgFallback(fallback)}
+                      className={`w-full object-cover ${i === 0 ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2">
+              <Reveal className="md:col-span-2">
+                <div className="overflow-hidden bg-plaster">
+                  <img src={photo} alt={entry.label} className="aspect-[21/9] w-full object-cover" />
+                </div>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <div className="overflow-hidden bg-plaster">
+                  <img
+                    src={photo}
+                    alt=""
+                    aria-hidden
+                    loading="lazy"
+                    className="aspect-[4/5] w-full scale-[1.7] object-cover"
+                    style={{ objectPosition: '24% 70%' }}
+                  />
+                </div>
+              </Reveal>
+              <Reveal delay={0.14}>
+                <div className="overflow-hidden bg-plaster">
+                  <img
+                    src={photo}
+                    alt=""
+                    aria-hidden
+                    loading="lazy"
+                    className="aspect-[4/5] w-full scale-[2.3] object-cover"
+                    style={{ objectPosition: '72% 32%' }}
+                  />
+                </div>
+              </Reveal>
+              <Reveal delay={0.2} className="md:col-span-2">
+                <div className="overflow-hidden bg-plaster">
+                  <img
+                    src={photo}
+                    alt=""
+                    aria-hidden
+                    loading="lazy"
+                    className="aspect-[16/7] w-full scale-[1.35] object-cover"
+                    style={{ objectPosition: '50% 85%' }}
+                  />
+                </div>
+              </Reveal>
+            </div>
+          )}
         </section>
 
         {/* Craft */}
@@ -176,9 +202,10 @@ export default function TypePage() {
                   <Link to={`/hard-landscaping/${item.slug}/${sibling.slug}`} className="group block">
                     <div className="overflow-hidden bg-plaster">
                       <img
-                        src={photos[siblingIndex]}
+                        src={typeGallery(slug!, sibling.slug, siblingIndex)[0] ?? photos[siblingIndex]}
                         alt={sibling.label}
                         loading="lazy"
+                        onError={imgFallback(typeFallback(slug!, siblingIndex))}
                         className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-luxe group-hover:scale-[1.04]"
                       />
                     </div>

@@ -10,6 +10,8 @@ type BrandMarkProps = {
   /** Type the name in letter by letter (used once, right after the intro). */
   animateLetters?: boolean;
   morph?: boolean;
+  /** 'light' flips the wordmark to limestone for dark backgrounds (e.g. mobile menu). */
+  tone?: 'dark' | 'light';
   className?: string;
 };
 
@@ -17,10 +19,13 @@ export default function BrandMark({
   variant = 'nav',
   animateLetters = false,
   morph = true,
+  tone = 'dark',
   className = '',
 }: BrandMarkProps) {
   const reduce = useReducedMotion();
   const animate = animateLetters && !reduce;
+  const nameColor = tone === 'light' ? 'text-limestone' : 'text-ink';
+  const subColor = tone === 'light' ? 'text-limestone/60' : 'text-muted';
 
   if (variant === 'intro') {
     // The logo carries the name, so the intro shows the mark alone
@@ -43,7 +48,7 @@ export default function BrandMark({
         className="h-10 w-10 shrink-0 rounded-full object-cover md:h-11 md:w-11"
       />
       <div className="flex flex-col">
-        <span className="font-serif text-2xl leading-none text-ink" aria-label="Atelier">
+        <span className={`font-serif text-2xl leading-none ${nameColor}`} aria-label="Atelier">
           {animate
             ? LETTERS.map((letter, i) => (
                 <motion.span
@@ -60,7 +65,7 @@ export default function BrandMark({
         </span>
         {animate ? (
           <motion.span
-            className="mt-1 text-[8px] uppercase tracking-[0.45em] text-muted"
+            className={`mt-1 text-[8px] uppercase tracking-[0.45em] ${subColor}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9, ease: EASE }}
@@ -68,7 +73,7 @@ export default function BrandMark({
             Marbella
           </motion.span>
         ) : (
-          <span className="mt-1 text-[8px] uppercase tracking-[0.45em] text-muted">Marbella</span>
+          <span className={`mt-1 text-[8px] uppercase tracking-[0.45em] ${subColor}`}>Marbella</span>
         )}
       </div>
     </div>

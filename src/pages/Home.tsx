@@ -6,6 +6,7 @@ import Hero from '../sections/Hero';
 import Manifesto from '../sections/Manifesto';
 import ServicesChoice from '../sections/ServicesChoice';
 import Locations from '../sections/Locations';
+import Network from '../sections/Network';
 
 function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
   const reduce = useReducedMotion();
@@ -37,6 +38,9 @@ export default function Home() {
         </Card>
         <Card className="bg-limestone">
           <Locations />
+        </Card>
+        <Card className="bg-limestone">
+          <Network />
         </Card>
       </div>
     </PageShell>

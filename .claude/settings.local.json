@@ -5,7 +5,19 @@
       "PowerShell(try { $r = Invoke-RestMethod -Uri \"https://unsplash.com/napi/search/photos?query=luxury%20villa%20pool&per_page=6&orientation=landscape\" -TimeoutSec 30 -UseBasicParsing; $r.results | ForEach-Object { Write-Output \\(\"{0} | {1} | {2}\" -f $_.id, $_.urls.raw.Split\\('?'\\)[0], $_.alt_description\\) } } catch { Write-Output \"FAIL: $\\($_.Exception.Message\\)\" })",
       "WebSearch",
       "mcp__Claude_Preview__preview_start",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\uuuul\\\\Desktop\\\\firma espanyania\" -Directory)",
+      "Bash(Select-Object Name)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\uuuul\\\\Desktop\\\\firma hiszpania\" -Recurse -Directory)",
+      "Bash(Select-Object -First 20)",
+      "Bash(Format-Table FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\uuuul\\\\Desktop\\\\firma hiszpania\" -Recurse -Depth 3 -Include \"*.tsx\", \"*.ts\", \"*.jsx\", \"*.js\", \"*.css\", \"tailwind.config.*\")",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\uuuul\\\\Desktop\" | Where-Object { $_.PSIsContainer } | Select-Object Name)",
+      "PowerShell(ls \"C:\\\\Users\\\\uuuul\\\\Desktop\\\\firma hiszpania\" | where {$_.Name -match \"tailwind|vite|tsconfig\"})",
+      "Bash(git remote *)"
     ]
   }
 }

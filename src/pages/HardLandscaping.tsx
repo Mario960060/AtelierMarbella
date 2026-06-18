@@ -22,7 +22,6 @@ export default function HardLandscaping() {
   const reduce = useReducedMotion();
   const groupSources = t('hardPage.groups', { returnObjects: true }) as GroupSource[];
   const steps = t('hardPage.steps', { returnObjects: true }) as Step[];
-  const areas = t('hardPage.areas', { returnObjects: true }) as string[];
 
   const stageGroups: StageGroup[] = groupSources.map((group, g) => ({
     name: group.name,
@@ -69,7 +68,7 @@ export default function HardLandscaping() {
             >
               {t('hardPage.heroSub')}
             </motion.p>
-            <motion.div {...heroIn(0.44)} className="mt-9 flex flex-wrap items-center gap-7">
+            <motion.div {...heroIn(0.44)} className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
               <button
                 onClick={() => navigate('/contact')}
                 className="bg-azure px-7 py-3.5 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-azure-deep active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-limestone focus-visible:ring-offset-2 focus-visible:ring-offset-ink/40"
@@ -163,7 +162,7 @@ export default function HardLandscaping() {
                 transition={{ duration: 1.2, ease: HERO_EASE }}
                 className="absolute inset-x-0 top-[7px] hidden h-px origin-left bg-ink/15 lg:block"
               />
-              <ol className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+              <ol className="grid gap-x-10 gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-4">
                 {steps.map((step, i) => (
                   <Reveal key={step.title} delay={i * 0.1}>
                     <li className="relative">
@@ -183,60 +182,48 @@ export default function HardLandscaping() {
           </div>
         </section>
 
-        {/* Areas served */}
-        <section className="bg-plaster px-6 py-24 lg:px-12 lg:py-28">
-          <Reveal>
-            <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">
-              {t('hardPage.areasTitle')}
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ul className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
-              {areas.map((area) => (
-                <li
-                  key={area}
-                  className="font-display text-3xl font-medium text-ink/85 md:text-5xl"
-                >
-                  {area}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <p className="mt-8 max-w-[60ch] text-sm leading-relaxed text-ink/55">
-              {t('hardPage.areasNote')}
-            </p>
-          </Reveal>
-        </section>
-
-        {/* Closing CTA */}
-        <section className="px-6 py-24 text-center lg:py-32">
-          <Reveal>
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold tracking-tight md:text-5xl">
-              {t('hardPage.ctaTitle')}
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="mx-auto mt-5 max-w-[55ch] text-base leading-relaxed text-ink/65">
-              {t('hardPage.ctaSub')}
-            </p>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <button
-              onClick={() => navigate('/contact')}
-              className="mt-10 bg-azure px-8 py-4 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-azure-deep active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2"
-            >
-              {t('hardPage.ctaQuote')}
-            </button>
-            <div className="mt-8">
-              <Link
-                to="/"
-                className="text-sm text-ink/55 underline-offset-4 transition-colors duration-200 hover:text-azure hover:underline"
+        {/* Closing CTA — full-bleed photo */}
+        <section className="relative overflow-hidden">
+          <img
+            src="/images/contactusbackground.jpg"
+            alt=""
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/60 to-ink/45" />
+          <div className="relative z-10 mx-auto max-w-3xl px-6 py-28 text-center lg:py-40">
+            <Reveal>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-limestone/70">
+                {t('hardPage.ctaEyebrow')}
+              </p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-limestone md:text-6xl">
+                {t('hardPage.ctaTitle')}
+              </h2>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="mx-auto mt-6 max-w-[52ch] text-base leading-relaxed text-limestone/80 md:text-lg">
+                {t('hardPage.ctaSub')}
+              </p>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <button
+                onClick={() => navigate('/contact')}
+                className="mt-10 bg-azure px-8 py-4 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-azure-deep active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-limestone focus-visible:ring-offset-2 focus-visible:ring-offset-ink/40"
               >
-                {t('hardPage.back')}
-              </Link>
-            </div>
-          </Reveal>
+                {t('hardPage.ctaQuote')}
+              </button>
+              <div className="mt-8">
+                <Link
+                  to="/"
+                  className="text-sm text-limestone/60 underline-offset-4 transition-colors duration-200 hover:text-limestone hover:underline"
+                >
+                  {t('hardPage.back')}
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
       </div>
     </PageShell>

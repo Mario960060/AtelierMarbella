@@ -33,6 +33,28 @@ const StackCardArrivalContext = createContext<MotionValue<number> | null>(null);
  */
 const STACK_SNAP = { band: 0.45, threshold: 0.25, duration: 0.4 } as const;
 
+/**
+ * Mobile: a short vertical swipe commits to the adjacent card and glides there.
+ * The thresholds are deliberately small so even a gentle flick advances one card;
+ * while the finger drags we hold the deck still, then commit on release so the
+ * transition always lands cleanly on the next/previous card.
+ */
+const MOBILE_SWIPE_TRIGGER = 10; // px of vertical travel that commits the swipe
+const MOBILE_SWIPE_VELOCITY = 0.12; // px/ms — a quick flick commits even if short
+const MOBILE_SNAP_DURATION = 0.4; // s — the glide onto the next/previous card
+const MOBILE_SETTLE_MS = 140;
+
+function cardIndexFromProgress(v: number, n: number) {
+  if (n < 2) return 0;
+  const step = 1 / (n - 1);
+  return Math.round(Math.min(1, Math.max(0, v)) / step);
+}
+
+function progressFromCardIndex(index: number, n: number) {
+  if (n < 2) return 0;
+  return index / (n - 1);
+}
+
 /** Scroll progress (0→1) for the active stack card — drives parallax and content stagger. */
 export function useStackCardArrival(explicit?: MotionValue<number>) {
   const fromContext = useContext(StackCardArrivalContext);
@@ -50,7 +72,8 @@ export default function StackCards({ cards }: { cards: ReactNode[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const isDesktop = useIsDesktop();
-  const snap = isDesktop && !reduced;
+  const desktopSnap = isDesktop && !reduced;
+  const mobileSnap = !isDesktop && !reduced;
   const { scrollY } = useScroll();
   const [metrics, setMetrics] = useState({ top: 0, range: 1 });
   const metricsRef = useRef(metrics);
@@ -96,11 +119,20 @@ export default function StackCards({ cards }: { cards: ReactNode[] }) {
   const snappingRef = useRef(false);
   const lastProgressRef = useRef(0);
   const directionRef = useRef(0);
+  const settleTimerRef = useRef<number>();
 
-  const snapToProgress = (target: number) => {
-    const { top, range } = metricsRef.current;
+  const snapToProgress = (target: number, duration = STACK_SNAP.duration) => {
+    // Measure fresh from the container so the target is correct even when a
+    // programmatic scroll hasn't refreshed metricsRef yet.
+    let { top, range } = metricsRef.current;
+    const el = containerRef.current;
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      top = rect.top + window.scrollY;
+      range = Math.max(1, el.offsetHeight - window.innerHeight);
+    }
     runSnap(progressToY(target, top, range), {
-      duration: STACK_SNAP.duration,
+      duration,
       onStart: () => {
         snappingRef.current = true;
       },
@@ -109,6 +141,94 @@ export default function StackCards({ cards }: { cards: ReactNode[] }) {
       },
     });
   };
+
+  // Mobile: hold the pinned deck still under the finger, then on release glide to
+  // the adjacent card if the swipe passed a small distance/velocity threshold —
+  // one short swipe always lands on the next/previous of the cards. At the deck's
+  // first and last card we let the gesture through so the page scrolls in and out.
+  useEffect(() => {
+    if (!mobileSnap) return;
+    const el = containerRef.current;
+    if (!el) return;
+
+    let startY = 0;
+    let startX = 0;
+    let startTime = 0;
+    let startIndex = 0;
+    let tracking = false;
+
+    const isPinned = () => {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= 1 && rect.bottom >= window.innerHeight - 1;
+    };
+
+    // Read the live card index from the real scroll position — lastProgressRef
+    // can lag behind a programmatic scroll and point at the wrong card.
+    const currentIndex = () => {
+      const rect = el.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
+      const range = Math.max(1, el.offsetHeight - window.innerHeight);
+      const v = Math.min(1, Math.max(0, (window.scrollY - top) / range));
+      return cardIndexFromProgress(v, cards.length);
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      window.clearTimeout(settleTimerRef.current);
+      const touch = e.touches[0];
+      startY = touch.clientY;
+      startX = touch.clientX;
+      startTime = performance.now();
+      startIndex = currentIndex();
+      tracking = isPinned() && !snappingRef.current;
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (!tracking) return;
+      const touch = e.touches[0];
+      const deltaY = startY - touch.clientY; // > 0 = swipe up = next card
+      const deltaX = startX - touch.clientX;
+      if (Math.abs(deltaY) <= Math.abs(deltaX)) return; // leave horizontal gestures alone
+
+      const n = cards.length;
+      const goNext = deltaY > 0 && startIndex < n - 1;
+      const goPrev = deltaY < 0 && startIndex > 0;
+      if (!goNext && !goPrev) return; // at an edge — let the page scroll out
+
+      // Hold the deck still so the finger can't free-scroll past a card.
+      if (e.cancelable) e.preventDefault();
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (!tracking) return;
+      tracking = false;
+      const touch = e.changedTouches[0];
+      const deltaY = startY - (touch?.clientY ?? startY);
+      const deltaX = startX - (touch?.clientX ?? startX);
+      if (Math.abs(deltaY) <= Math.abs(deltaX)) return;
+
+      const velocity = Math.abs(deltaY) / Math.max(1, performance.now() - startTime);
+      if (Math.abs(deltaY) < MOBILE_SWIPE_TRIGGER && velocity < MOBILE_SWIPE_VELOCITY) return;
+
+      const n = cards.length;
+      let target = -1;
+      if (deltaY > 0 && startIndex < n - 1) target = startIndex + 1;
+      else if (deltaY < 0 && startIndex > 0) target = startIndex - 1;
+      if (target < 0) return;
+
+      // Defer past this event so Lenis' own touchend handler (which runs after
+      // ours) doesn't swallow the programmatic scroll we're about to start.
+      requestAnimationFrame(() => snapToProgress(progressFromCardIndex(target, n), MOBILE_SNAP_DURATION));
+    };
+
+    el.addEventListener('touchstart', onTouchStart, { passive: true });
+    el.addEventListener('touchmove', onTouchMove, { passive: false });
+    el.addEventListener('touchend', onTouchEnd, { passive: true });
+    return () => {
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchmove', onTouchMove);
+      el.removeEventListener('touchend', onTouchEnd);
+    };
+  }, [mobileSnap, cards.length]);
 
   const tryThresholdSnap = (v: number) => {
     if (snappingRef.current) return;
@@ -142,11 +262,32 @@ export default function StackCards({ cards }: { cards: ReactNode[] }) {
   };
 
   useMotionValueEvent(containerProgress, 'change', (v) => {
-    if (!snap) return;
     directionRef.current = Math.sign(v - lastProgressRef.current) || directionRef.current;
     lastProgressRef.current = v;
-    tryThresholdSnap(v);
+
+    if (desktopSnap) {
+      tryThresholdSnap(v);
+    }
+
+    if (!mobileSnap) return;
+    window.clearTimeout(settleTimerRef.current);
+    settleTimerRef.current = window.setTimeout(() => {
+      if (snappingRef.current) return;
+      const n = cards.length;
+      if (n < 2) return;
+      const nearest = progressFromCardIndex(cardIndexFromProgress(v, n), n);
+      if (Math.abs(v - nearest) > 0.015) {
+        snapToProgress(nearest);
+      }
+    }, MOBILE_SETTLE_MS);
   });
+
+  useEffect(
+    () => () => {
+      window.clearTimeout(settleTimerRef.current);
+    },
+    []
+  );
 
   return (
     <div
@@ -216,7 +357,7 @@ function StackCard({
       : children;
 
   return (
-    <div className="sticky top-0 flex h-screen items-center px-3 lg:px-6">
+    <div className="sticky top-0 flex h-screen items-center px-0 lg:px-6">
       <StackCardArrivalContext.Provider value={arrivalValue}>
         <motion.div
           style={reduced ? undefined : { scale: stackScale, transformOrigin: 'center top' }}

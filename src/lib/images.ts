@@ -9,7 +9,7 @@ export const IMAGES = {
   hard: hardLandscaping,
   maintenance: px('7174105', 1800),
   uk: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-  ibiza: px('32208082', 1200),
+  mallorca: px('32208082', 1200),
   costa: px('29453302', 1200),
 };
 
@@ -38,10 +38,28 @@ export const STAGE_SCENES = [
   '/images/scene-gates.png', // gates & fencing — timber driveway gate, slatted screens
 ];
 
+// Every project photo we have — feeds the "Our standard" page-flip slideshow.
+// Just the showcase photography (no logo, no locations map).
+export const SHOWCASE_IMAGES: string[] = Array.from(
+  new Set([
+    '/images/scene-stone.jpg',
+    '/images/scene-living.jpg',
+    '/images/scene-water.jpg',
+    '/images/scene-gates.png',
+    hardLandscaping,
+    '/images/contactusbackground.jpg',
+    ...MAINTENANCE_CATEGORY_IMAGES,
+    HARD_SERVICE_IMAGES[1],
+    IMAGES.mallorca,
+    IMAGES.costa,
+  ])
+);
+
 // Type-gallery photos per element subpage (3 each), keyed by slug
 export const ELEMENT_TYPES: Record<string, string[]> = {
   terraces: [px('1268871'), px('4186553'), px('16549111')],
-  'walls-steps': [px('35489078'), px('17838779'), px('15173129')],
+  'retaining-walls': [px('35489078'), px('17838779'), px('16549111')],
+  steps: [px('15173129'), px('14965464'), px('11806477')],
   pergolas: [px('31687640'), px('24807124'), px('13871249')],
   'outdoor-kitchens': [px('10855255'), px('12441653'), px('28542200')],
   lighting: [px('17102583'), px('35297031'), px('13721095')],
@@ -51,3 +69,44 @@ export const ELEMENT_TYPES: Record<string, string[]> = {
   gates: [px('10935460'), px('13278911'), px('2102584')],
   fencing: [px('7031594'), px('9735388'), px('7031581')],
 };
+
+// ---------------------------------------------------------------------------
+// Real per-subcategory project photos. Each subcategory (type) gets its own
+// small gallery: index 0 is the hero/cover, the rest fill the detail grid.
+// Drop generated files into public/images/elements/<category>/ with the names
+// below. Any subcategory without an entry keeps the single ELEMENT_TYPES
+// placeholder, and a missing file falls back to it at runtime (typeFallback).
+// ---------------------------------------------------------------------------
+const elem = (category: string, name: string, count: number) =>
+  Array.from({ length: count }, (_, i) => `/images/elements/${category}/${name}-${i + 1}.jpg`);
+
+export const TYPE_GALLERIES: Record<string, string[]> = {
+  // Terraces, paths & patios (4 photos each: [0] is the hero/cover)
+  'porcelain-paving': elem('terraces', 'porcelain-paving', 4),
+  'natural-stone': elem('terraces', 'natural-stone', 4),
+  decking: elem('terraces', 'decking', 4),
+  // Retaining walls
+  'natural-stone-walls': elem('retaining-walls', 'natural-stone-walls', 4),
+  'rendered-walls': elem('retaining-walls', 'rendered-walls', 4),
+  'feature-walls': elem('retaining-walls', 'feature-walls', 4),
+};
+
+// Optional dedicated hero per category page; falls back to the first type cover.
+export const ELEMENT_HEROES: Record<string, string> = {
+  terraces: '/images/elements/terraces/hero.jpg',
+  'retaining-walls': '/images/elements/retaining-walls/hero.jpg',
+};
+
+/** Gallery for a subcategory — real per-type photos when we have them, else the
+ *  legacy single category placeholder. Index 0 is the hero/cover. */
+export function typeGallery(category: string, typeSlug: string, typeIndex: number): string[] {
+  const real = TYPE_GALLERIES[typeSlug];
+  if (real && real.length) return real;
+  const placeholder = ELEMENT_TYPES[category]?.[typeIndex];
+  return placeholder ? [placeholder] : [];
+}
+
+/** The placeholder a real photo falls back to if its file is missing (404). */
+export function typeFallback(category: string, typeIndex: number): string {
+  return ELEMENT_TYPES[category]?.[typeIndex] ?? '';
+}

@@ -45,7 +45,7 @@ function CategoryCard({
   const numberY = useTransform(arrival, staggerRange(0.28), [12, 0]);
 
   return (
-    <article className="grid h-full grid-rows-[9rem,1fr] lg:grid-cols-5 lg:grid-rows-1">
+    <article className="grid h-full grid-rows-[11rem,1fr] lg:grid-cols-5 lg:grid-rows-1">
       <div className="relative overflow-hidden lg:col-span-2 lg:h-full">
         <motion.img
           src={image}

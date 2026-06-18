@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import PageShell from '../components/PageShell';
 import { EASE, Reveal } from '../components/Reveal';
-import { ELEMENT_TYPES } from '../lib/images';
-import { scrollToId } from '../lib/scroll';
+import { ELEMENT_HEROES, ELEMENT_TYPES, typeFallback, typeGallery } from '../lib/images';
+import { imgFallback } from '../lib/imgFallback';
 
 type TypeEntry = { slug: string; label: string; phrase: string };
 type Item = {
@@ -39,19 +39,20 @@ export default function ElementPage() {
     return <Navigate to="/hard-landscaping" replace />;
   }
   const { item, groupName } = found;
+  const heroSrc = ELEMENT_HEROES[slug!] ?? typeGallery(slug!, item.types[0]?.slug ?? '', 0)[0] ?? photos[0];
 
-  const backToBuild = () => {
-    navigate('/hard-landscaping');
-    setTimeout(() => scrollToId('build'), 650);
-  };
+  // Back to "What we build": the section restores to the scene this element
+  // lives in (it reads the route we came from), so just navigate there.
+  const backToBuild = () => navigate('/hard-landscaping');
 
   return (
     <PageShell>
       <div className="bg-limestone font-body text-ink">
         <section className="relative flex h-[46vh] min-h-[360px] items-end overflow-hidden">
           <motion.img
-            src={photos[0]}
+            src={heroSrc}
             alt={item.title}
+            onError={imgFallback(typeFallback(slug!, 0))}
             initial={{ scale: 1.08 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.3, ease: EASE }}
@@ -78,9 +79,8 @@ export default function ElementPage() {
           <div className="relative mt-14 lg:mt-20">
             <div className="absolute inset-y-2 left-4 w-px bg-ink/15 md:left-1/2 md:-translate-x-1/2" />
             <div className="space-y-16 md:space-y-24">
-              {photos.map((src, i) => {
-                const typeEntry = item.types[i];
-                if (!typeEntry) return null;
+              {item.types.map((typeEntry, i) => {
+                const src = typeGallery(slug!, typeEntry.slug, i)[0] ?? photos[i];
                 const onLeft = i % 2 === 0;
                 return (
                   <motion.div
@@ -116,6 +116,7 @@ export default function ElementPage() {
                             src={src}
                             alt={typeEntry.label}
                             loading={i === 0 ? 'eager' : 'lazy'}
+                            onError={imgFallback(typeFallback(slug!, i))}
                             className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-luxe group-hover:scale-[1.05]"
                           />
                         </div>

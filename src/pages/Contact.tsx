@@ -27,10 +27,10 @@ const CONTACT = {
   whatsappHref: 'https://wa.me/34600000000',
 };
 
-type Region = 'costa' | 'ibiza' | 'uk';
+type Region = 'costa' | 'mallorca' | 'uk';
 type Service = 'hard' | 'maintenance' | 'both';
 
-const REGIONS: Region[] = ['costa', 'ibiza', 'uk'];
+const REGIONS: Region[] = ['costa', 'mallorca', 'uk'];
 const SERVICES: Service[] = ['hard', 'maintenance', 'both'];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -238,7 +238,7 @@ export default function Contact() {
               {/* Right — form / success */}
               <div className="lg:col-span-7">
                 <Reveal delay={0.1}>
-                  <div className="rounded-2xl border border-line bg-white p-6 shadow-[0_24px_70px_-40px_rgba(20,18,13,0.45)] sm:p-8 lg:p-10">
+                  <div className="rounded-2xl border border-line bg-white p-5 shadow-[0_24px_70px_-40px_rgba(20,18,13,0.45)] sm:p-8 lg:p-10">
                     {sent ? (
                         <motion.div
                           initial={{ opacity: 0, y: reduce ? 0 : 12 }}

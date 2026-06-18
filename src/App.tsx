@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, LayoutGroup } from 'framer-motion';
 import Lenis from 'lenis';
 import { IntroContext } from './lib/intro';
+import { recordPath } from './lib/scroll';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -20,6 +21,13 @@ export default function App() {
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const [introDone, setIntroDone] = useState(reducedMotion);
   const [loaderGone, setLoaderGone] = useState(reducedMotion);
+
+  // Record the route history so a page can detect a Back navigation. Runs on
+  // each location change, before AnimatePresence mounts the new page — which then
+  // reads getPreviousPath() to know where it came from.
+  useEffect(() => {
+    recordPath(location.pathname);
+  }, [location.pathname]);
 
   useEffect(() => {
     const lenis = new Lenis({

@@ -1,25 +1,100 @@
-import { useRef } from 'react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { MaskReveal, Reveal } from '../components/Reveal';
-import { STAGE_SCENES } from '../lib/images';
+import { SHOWCASE_IMAGES } from '../lib/images';
 
 type Stat = { v: string; k: string };
 
+const FLIP_EASE = [0.4, 0, 0.2, 1] as const; // smooth, organic page-turn
+const HOLD_MS = 2000; // full cycle per photo (~2s)
+const FLIP_MS = 950; // how long a page takes to turn
+
+/** Slow auto-advancing photo slideshow with a book page-turn between frames. */
+function PageFlipShow({ alt }: { alt: string }) {
+  const reduce = useReducedMotion();
+  const n = SHOWCASE_IMAGES.length;
+  const [index, setIndex] = useState(0);
+  const [flipping, setFlipping] = useState(false);
+
+  useEffect(() => {
+    if (reduce || n < 2) return;
+    let flipTimer = 0;
+    const hold = window.setInterval(() => {
+      setFlipping(true);
+      flipTimer = window.setTimeout(() => {
+        setIndex((i) => (i + 1) % n);
+        setFlipping(false);
+      }, FLIP_MS);
+    }, HOLD_MS);
+    return () => {
+      window.clearInterval(hold);
+      window.clearTimeout(flipTimer);
+    };
+  }, [reduce, n]);
+
+  // Reduced motion: a single still photo, no auto-changing.
+  if (reduce) {
+    return (
+      <div className="aspect-[4/5] w-full">
+        <img src={SHOWCASE_IMAGES[0]} alt={alt} className="h-full w-full object-cover" />
+      </div>
+    );
+  }
+
+  const next = SHOWCASE_IMAGES[(index + 1) % n];
+  return (
+    <div
+      className="relative aspect-[4/5] w-full [perspective:1500px]"
+      style={{ perspectiveOrigin: 'left center' }}
+    >
+      {/* the next photo, revealed as the page turns */}
+      <img src={next} alt="" className="absolute inset-0 h-full w-full object-cover" />
+
+      {/* shadow the lifting page casts on the revealed photo, near the spine —
+          strongest mid-turn, gone once the page lays flat */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/60 via-ink/15 to-transparent"
+        animate={{ opacity: flipping ? [0, 0.5, 0] : 0 }}
+        transition={{ duration: FLIP_MS / 1000, times: [0, 0.55, 1], ease: 'easeInOut' }}
+      />
+
+      {/* the current photo — the page that turns away on its left spine */}
+      <motion.div
+        key={index}
+        className="absolute inset-0 [will-change:transform]"
+        style={{ transformOrigin: 'left center', transformStyle: 'preserve-3d' }}
+        initial={{ rotateY: 0 }}
+        animate={{ rotateY: flipping ? -180 : 0 }}
+        transition={{ duration: FLIP_MS / 1000, ease: FLIP_EASE }}
+      >
+        <img
+          src={SHOWCASE_IMAGES[index]}
+          alt={alt}
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ backfaceVisibility: 'hidden' }}
+        />
+        {/* gutter shading on the page surface, deepening as the page angles away */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/0 via-black/10 to-black/55"
+          style={{ backfaceVisibility: 'hidden' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: flipping ? 1 : 0 }}
+          transition={{ duration: FLIP_MS / 1000, ease: FLIP_EASE }}
+        />
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Manifesto() {
   const { t } = useTranslation();
-  const reduce = useReducedMotion();
   const stats = t('manifesto.stats', { returnObjects: true }) as Stat[];
 
-  const imageRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: imageRef,
-    offset: ['start end', 'end start'],
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-7%', '7%']);
-
   return (
-    <div className="px-6 py-24 lg:px-12 lg:py-32">
+    <div className="px-6 pt-24 lg:px-12 lg:pt-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr,0.95fr] lg:gap-20">
         {/* Statement */}
         <div>
@@ -56,23 +131,11 @@ export default function Manifesto() {
           </Reveal>
         </div>
 
-        {/* Photograph — the work does the talking */}
+        {/* Photograph — a slow page-flip slideshow of the work */}
         <Reveal delay={0.15} y={40}>
-          <figure
-            ref={imageRef}
-            className="relative overflow-hidden rounded-md shadow-[0_45px_90px_-45px_rgba(20,18,13,0.55)]"
-          >
-            <div className="aspect-[4/5] w-full overflow-hidden">
-              <motion.img
-                src={STAGE_SCENES[0]}
-                alt={t('manifesto.imageAlt')}
-                loading="lazy"
-                style={reduce ? undefined : { y: imageY, scale: 1.14 }}
-                className="h-full w-full object-cover will-change-transform"
-              />
-            </div>
+          <figure className="relative overflow-hidden rounded-md shadow-[0_45px_90px_-45px_rgba(20,18,13,0.55)]">
+            <PageFlipShow alt={t('manifesto.imageAlt')} />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
-            {/* hairline frame for a crafted, finished feel */}
             <div className="pointer-events-none absolute inset-0 rounded-md ring-1 ring-inset ring-limestone/15" />
           </figure>
         </Reveal>

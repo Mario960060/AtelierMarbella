@@ -1,6 +1,6 @@
 # Atelier Marbella
 
-Marketing site — hard landscaping & property maintenance (UK · Ibiza · Costa del Sol).
+Marketing site — hard landscaping & property maintenance (UK · Mallorca · Costa del Sol).
 
 Stack: Vite + React + TypeScript + Tailwind CSS, Framer Motion (animations), Lenis (smooth scroll), react-i18next (EN/ES).
 

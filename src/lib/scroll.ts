@@ -4,6 +4,26 @@ function getLenis(): Lenis | undefined {
   return (window as unknown as { lenis?: Lenis }).lenis;
 }
 
+/**
+ * Tracks the route we came *from*. App calls recordPath on every location
+ * change; because `AnimatePresence mode="wait"` defers mounting the new page
+ * until after that runs, the new page can read getPreviousPath() to tell whether
+ * it was reached via Back from a child route (and restore the matching scroll
+ * position) versus a fresh forward navigation.
+ */
+let currentPath = '';
+let previousPath = '';
+
+export function recordPath(path: string) {
+  if (path === currentPath) return;
+  previousPath = currentPath;
+  currentPath = path;
+}
+
+export function getPreviousPath() {
+  return previousPath;
+}
+
 export function scrollToId(id: string) {
   const el = document.getElementById(id);
   if (!el) return;

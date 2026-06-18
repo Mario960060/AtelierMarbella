@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import { useIntro } from '../lib/intro';
+import { IMAGES } from '../lib/images';
 import LanguageSwitcher from './LanguageSwitcher';
 import BrandMark from './BrandMark';
 import { EASE } from './Reveal';
@@ -20,13 +21,11 @@ export default function Navbar() {
   const introDone = useIntro();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useMotionValueEvent(scrollY, 'change', (y) => {
     const prev = scrollY.getPrevious() ?? 0;
     setHidden(y > prev && y > 160 && !open);
-    setScrolled(y > 40);
   });
 
   return (
@@ -36,13 +35,7 @@ export default function Navbar() {
         animate={{ y: hidden ? '-100%' : '0%', opacity: introDone ? 1 : 0 }}
         transition={{ y: { duration: 0.55, ease: EASE }, opacity: { duration: 0.6 } }}
       >
-        <div
-          className={`flex h-20 items-center justify-between px-6 transition-all duration-500 lg:px-12 ${
-            scrolled
-              ? 'border-b border-line bg-ivory/85 backdrop-blur-md'
-              : 'border-b border-transparent bg-transparent'
-          }`}
-        >
+        <div className="flex h-20 items-center justify-between border-b border-line bg-ivory px-6 lg:px-12">
           <Link to="/" aria-label="Atelier Marbella — home">
             {introDone && <BrandMark variant="nav" animateLetters />}
           </Link>
@@ -92,19 +85,36 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[70] flex flex-col bg-ivory px-6 pb-10 pt-6"
+            className="fixed inset-0 z-[70] flex flex-col overflow-hidden bg-night px-6 pb-10 pt-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
           >
-            <div className="flex h-14 items-center justify-between">
-              <BrandMark variant="nav" morph={false} />
-              <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-ink">
+            {/* Mediterranean photo backdrop with a dark wash for legible light text */}
+            <div className="pointer-events-none absolute inset-0">
+              <motion.img
+                src={IMAGES.hard}
+                alt=""
+                className="h-full w-full object-cover"
+                initial={{ scale: 1.08 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.2, ease: EASE }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-night/92 via-night/82 to-night/72" />
+            </div>
+
+            <div className="relative z-10 flex h-14 items-center justify-between">
+              <BrandMark variant="nav" morph={false} tone="light" />
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close menu"
+                className="text-limestone"
+              >
                 <X size={28} strokeWidth={1.5} />
               </button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-3">
+            <nav className="relative z-10 flex flex-1 flex-col justify-start gap-4 pt-12">
               {LINKS.map((l, i) => (
                 <motion.div
                   key={l.to}
@@ -116,7 +126,7 @@ export default function Navbar() {
                     to={l.to}
                     end={l.to === '/'}
                     onClick={() => setOpen(false)}
-                    className="font-serif text-4xl text-ink"
+                    className="font-serif text-5xl text-limestone"
                   >
                     {t(`nav.${l.key}`)}
                   </NavLink>
@@ -132,13 +142,15 @@ export default function Navbar() {
                     setOpen(false);
                     navigate('/contact');
                   }}
-                  className="mt-8 border border-ink px-8 py-4 text-[11px] uppercase tracking-[0.2em] text-ink"
+                  className="mt-10 border border-limestone/70 px-8 py-4 text-[11px] uppercase tracking-[0.2em] text-limestone transition-colors duration-500 hover:bg-limestone hover:text-night"
                 >
                   {t('nav.cta')}
                 </button>
               </motion.div>
             </nav>
-            <LanguageSwitcher />
+            <div className="relative z-10">
+              <LanguageSwitcher dark />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

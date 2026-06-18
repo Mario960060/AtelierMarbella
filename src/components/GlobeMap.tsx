@@ -27,7 +27,7 @@ function latLonToVec3(lat: number, lon: number, r: number) {
 
 /**
  * Realistic satellite-textured globe zoomed in on Western Europe
- * (UK, Ibiza, Costa del Sol), with sun lighting, atmosphere glow,
+ * (UK, Mallorca, Costa del Sol), with sun lighting, atmosphere glow,
  * azure marker spikes and HTML labels. Gently breathing, draggable
  * within a clamped range so the region stays in frame.
  */
@@ -42,7 +42,7 @@ export default function GlobeMap({ markers }: { markers: GlobeMarker[] }) {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 50);
-    camera.position.set(0, 0, 1.85);
+    camera.position.set(0, 0, 1.5);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));

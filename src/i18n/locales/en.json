@@ -7,10 +7,10 @@
   },
   "hero": {
     "eyebrow": "Seventeen years of craft",
-    "locations": "United Kingdom · Ibiza · Costa del Sol",
+    "locations": "United Kingdom · Mallorca · Costa del Sol",
     "title1": "Where British craft",
     "title2": "meets the Mediterranean.",
-    "sub": "For seventeen years we have shaped and cared for some of Britain's finest properties. Today, our craft is at home on Ibiza and the Costa del Sol.",
+    "sub": "For seventeen years we have shaped and cared for some of Britain's finest properties. Today, our craft is at home on Mallorca and the Costa del Sol.",
     "ctaPrimary": "Get a quote",
     "ctaSecondary": "Discover our services",
     "scroll": "Scroll"
@@ -19,7 +19,7 @@
     "eyebrow": "Our standard",
     "line1": "Built like we own it.",
     "line2": "Kept like we live there.",
-    "body": "Seventeen years of British craft set our standard. The Costa del Sol and Ibiza are where we hold it: one team, from the first sketch to every Friday visit.",
+    "body": "Seventeen years of British craft set our standard. The Costa del Sol and Mallorca are where we hold it: one team, from the first sketch to every Friday visit.",
     "imageAlt": "A finished Costa del Sol stone terrace in golden-hour light",
     "stats": [
       { "v": "17", "k": "Years of British craft" },
@@ -47,6 +47,7 @@
   },
   "locations": {
     "eyebrow": "Where we work",
+    "imageAlt": "Aerial view of the Mediterranean coastline we care for",
     "title": "Three coasts. One standard.",
     "titleLine1": "Three coasts.",
     "titleLine2": "One standard.",
@@ -54,14 +55,20 @@
       "name": "United Kingdom",
       "desc": "Where it began: seventeen years of refined outdoor craftsmanship."
     },
-    "ibiza": {
-      "name": "Ibiza",
-      "desc": "Discreet, year-round care for the island's most private estates."
+    "mallorca": {
+      "name": "Mallorca",
+      "desc": "Terraces, pools and Mediterranean gardens, designed and built for the island's most private estates."
     },
     "costa": {
       "name": "Costa del Sol",
-      "desc": "From Marbella to Sotogrande, complete estate care on the coast."
+      "desc": "From Marbella through Málaga to Nerja, natural stone, water and planting shaped into gardens that last."
     }
+  },
+  "network": {
+    "eyebrow": "Part of a trusted network",
+    "title": "A group of specialists behind every project.",
+    "sub": "We are part of a wider family of companies, each a specialist in its own craft. Together they let us build, plant and maintain to one standard.",
+    "visit": "Visit site"
   },
   "cta": {
     "title": "Your property, effortless.",
@@ -81,7 +88,7 @@
       "Key holding & inspections"
     ],
     "contact": "Contact",
-    "areas": "United Kingdom · Ibiza · Costa del Sol",
+    "areas": "United Kingdom · Mallorca · Costa del Sol",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "legal": "Legal Notice"
@@ -120,83 +127,130 @@
             ],
             "types": [
               {
-                "slug": "travertine",
-                "label": "Travertine & natural stone",
-                "phrase": "Cool underfoot in August. Level for decades.",
-                "blurb": "Travertine stays walkable in the height of summer and only looks better with age. We bed every slab on a compacted, drained base and finish the edges by hand.",
+                "slug": "porcelain-paving",
+                "label": "Porcelain paving",
+                "phrase": "Large-format, 20 mm.",
+                "blurb": "Large-format 20 mm porcelain gives a near-seamless, hard-wearing floor that shrugs off sun, frost and pool chemicals. We lay it dead flat on a drained base, joints tight and falls invisible.",
                 "marks": [
-                  "Levelled to the millimetre",
-                  "Sealed against sun and salt",
-                  "Laid on proper drainage"
+                  "Large-format, minimal joints",
+                  "Frost-, stain- and slip-rated",
+                  "Laid level on a drained base"
                 ]
               },
               {
-                "slug": "white-terraces",
-                "label": "Mediterranean white terraces",
-                "phrase": "Bright by day. Glowing at dusk.",
-                "blurb": "Lime-washed walls and pale stone make the most of Andalusian light. We build them to keep that brightness: honest materials, clean falls, no shortcuts under the surface.",
+                "slug": "natural-stone",
+                "label": "Natural stone",
+                "phrase": "Travertine, marble, limestone & granite.",
+                "blurb": "Travertine, marble, limestone and granite each age beautifully when they are bedded and finished properly. We cut, lay and seal every slab so the floor stays cool underfoot and level for decades.",
                 "marks": [
-                  "Breathable, lime-based finishes",
-                  "Falls that shed winter rain",
+                  "Travertine, marble, limestone, granite",
+                  "Sealed against sun and salt",
                   "Edges and copings finished by hand"
                 ]
               },
               {
-                "slug": "flagstone",
-                "label": "Flagstone & crazy paving",
-                "phrase": "Irregular by design. Precise by habit.",
-                "blurb": "Crazy paving only looks effortless when every joint is considered. We cut, fit and point each stone so the pattern flows and the surface stays dead flat.",
+                "slug": "decking",
+                "label": "Composite & timber decking",
+                "phrase": "Pool decks, raised terraces.",
+                "blurb": "Decking warms up a terrace and floats a level over uneven ground. We build the substructure to last on this coast and choose composite or hardwood to suit the pool, the sun and the upkeep you want.",
                 "marks": [
-                  "Joints pointed to last",
-                  "Each stone cut to fit its neighbour",
-                  "Flat enough for a dining table"
+                  "Engineered, ventilated substructure",
+                  "Composite or hardwood to suit",
+                  "Hidden fixings, clean margins"
                 ]
               }
             ]
           },
           {
-            "slug": "walls-steps",
-            "title": "Retaining walls & steps",
-            "desc": "Levels, steps and terraced ground that turn a slope into a feature.",
-            "body": "Sloping plots hide the best views. Retaining structures, steps and terraced levels turn an awkward gradient into usable, dramatic outdoor rooms.",
+            "slug": "retaining-walls",
+            "title": "Retaining walls",
+            "desc": "Structural walls that hold a slope and turn level changes into a feature.",
+            "body": "Sloping plots hide the best views. Engineered retaining walls tame an awkward gradient and become part of the design — clad, rendered or feature-faced to suit the house.",
             "details": [
-              "Structural retaining walls",
-              "Feature steps & landings",
-              "Terraced levels & planters",
-              "Stone cladding & finishes"
+              "Engineered structural retaining",
+              "Drainage & root space built in",
+              "Stone cladding, render & feature faces",
+              "Integrated planters & seating"
             ],
             "types": [
               {
-                "slug": "stairways",
-                "label": "Garden stairways",
-                "phrase": "Every step lands exactly where your foot expects.",
-                "blurb": "A good stairway disappears into the walk. We set risers to a constant rhythm and treads to a generous depth, then light them so the garden carries you up.",
+                "slug": "natural-stone-walls",
+                "label": "Natural stone & dry-stone walls",
+                "phrase": "Stone-clad, piedra seca, slate.",
+                "blurb": "Stacked and clad by hand, dry-stone and stone-faced walls root a house in the Andalusian landscape. We build the structure to retain and the face to last, course by course.",
+                "marks": [
+                  "Hand-laid stone faces",
+                  "Engineered, drained cores",
+                  "Ages into the landscape"
+                ]
+              },
+              {
+                "slug": "rendered-walls",
+                "label": "Rendered & whitewashed walls",
+                "phrase": "Encalado, board-formed concrete.",
+                "blurb": "Smooth lime render and board-formed concrete give walls a calm, modern face. We use breathable, coast-ready finishes so the white stays bright and the surface stays sound.",
+                "marks": [
+                  "Breathable lime finishes",
+                  "Crisp board-formed texture",
+                  "Falls that shed winter rain"
+                ]
+              },
+              {
+                "slug": "feature-walls",
+                "label": "Clad & feature walls",
+                "phrase": "Travertine, porcelain, gabion, corten.",
+                "blurb": "When a wall becomes the view, the facing does the talking. Travertine, porcelain, gabion and corten — set on a structure engineered to carry them without a crack.",
+                "marks": [
+                  "Statement facings, true to line",
+                  "Substructure built to carry the load",
+                  "Materials matched to the house"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "steps",
+            "title": "Steps",
+            "desc": "Flights and stairways that make every level change feel effortless.",
+            "body": "A good stair disappears into the walk. We set risers to a constant rhythm and treads to a generous depth, then shape and light them so the garden carries you between levels.",
+            "details": [
+              "Constant riser rhythm",
+              "Non-slip, hand-finished treads",
+              "Integrated step lighting",
+              "Straight, curved or floating forms"
+            ],
+            "types": [
+              {
+                "slug": "straight-flights",
+                "label": "Straight & terraced flights",
+                "phrase": "Linear, split-level.",
+                "blurb": "Clean, linear flights and split-level landings give a slope a calm rhythm. We set every riser to the same height so the climb feels effortless underfoot.",
                 "marks": [
                   "Constant riser rhythm",
-                  "Non-slip, hand-finished treads",
-                  "Ready for integrated lighting"
+                  "Generous, level treads",
+                  "Landings that break the climb"
                 ]
               },
               {
-                "slug": "planting-walls",
-                "label": "Terraced planting walls",
-                "phrase": "The wall holds the hill. The planting hides the wall.",
-                "blurb": "Terracing turns a slope into rooms. Our walls are engineered first and beautiful second, with drainage and root space built in from the start.",
-                "marks": [
-                  "Engineered to retain, built to drain",
-                  "Planting pockets from day one",
-                  "Stone faces that age well"
-                ]
-              },
-              {
-                "slug": "sculpted-steps",
-                "label": "Sculpted stone steps",
-                "phrase": "Curves that look poured, built stone by stone.",
-                "blurb": "Rounded steps and flowing walls take patience and good setting-out. We shape them in masonry, render and stone so the geometry stays crisp for years.",
+                "slug": "curved-steps",
+                "label": "Curved & radial steps",
+                "phrase": "Sweeping, fan-shaped.",
+                "blurb": "Sweeping, fan-shaped steps take patience and careful setting-out. We template every curve so the geometry stays crisp and the flight reads as one flowing gesture.",
                 "marks": [
                   "Set out with templates, not by eye",
                   "Reinforced cores under every curve",
-                  "Render that resists the coast"
+                  "Crisp edges that hold for years"
+                ]
+              },
+              {
+                "slug": "floating-steps",
+                "label": "Floating & cantilevered steps",
+                "phrase": "Monolithic box.",
+                "blurb": "Cantilevered treads that seem to float are pure engineering behind a clean face. We build the hidden structure first, then clad it so each step appears to hover.",
+                "marks": [
+                  "Hidden, engineered cantilever",
+                  "Monolithic, shadow-gap detail",
+                  "Lighting designed into the rise"
                 ]
               }
             ]
@@ -219,36 +273,36 @@
             ],
             "types": [
               {
-                "slug": "climbing-plant",
-                "label": "Climbing-plant pergolas",
-                "phrase": "Built for the bougainvillea it will carry in five years.",
-                "blurb": "A planted pergola is a structure with a future load. We size timbers and fixings for the mature plant, not the first season, and detail every junction to shrug off coastal wind.",
+                "slug": "bioclimatic-pergolas",
+                "label": "Bioclimatic aluminium pergolas",
+                "phrase": "Pérgola bioclimática.",
+                "blurb": "Motorised aluminium louvres turn shade on and off with the sun, then close to shrug off a summer storm. We integrate the structure, drainage, lighting and sensors so it reads as architecture, not an add-on.",
                 "marks": [
-                  "Sized for the mature plant",
-                  "Stainless or galvanised fixings",
-                  "Wires and training built in"
+                  "Motorised louvres, rain and sun",
+                  "Integrated drainage and lighting",
+                  "Coast-rated, powder-coated frame"
                 ]
               },
               {
-                "slug": "evening-lounge",
-                "label": "Evening lounge setups",
-                "phrase": "Where the evening slows down.",
-                "blurb": "Shade by day, atmosphere by night. We combine structure, festoon and low seating walls so the terrace works from siesta to midnight.",
+                "slug": "timber-steel-pergolas",
+                "label": "Timber & steel pergolas",
+                "phrase": "Wrought iron, slatted screens.",
+                "blurb": "Timber, steel and wrought iron make a pergola that belongs to the house. We size every member for coastal wind and the mature planting it will carry, with slatted screens where you want privacy.",
                 "marks": [
-                  "Lighting circuits hidden in the frame",
-                  "Power and speakers pre-wired",
-                  "Furniture-ready floor levels"
+                  "Sized for wind and mature planting",
+                  "Timber, steel or wrought iron",
+                  "Slatted screens built in"
                 ]
               },
               {
-                "slug": "fire-pit",
-                "label": "Timber fire-pit pergolas",
-                "phrase": "Warm enough for January. Solid enough for forever.",
-                "blurb": "A fire pit stretches the season to twelve months. We build the surround, the seating and the canopy as one piece, with safe clearances designed in.",
+                "slug": "shade-sails",
+                "label": "Shade sails, awnings & cane roofs",
+                "phrase": "Velas, toldos, cañizo.",
+                "blurb": "Sometimes shade should be light and removable. Tensioned sails, retractable awnings and cane roofs give soft cover for a season or for good, tensioned properly so nothing sags or flaps.",
                 "marks": [
-                  "Heat-safe clearances designed in",
-                  "Benches built into the structure",
-                  "Timber treated for open air"
+                  "Tensioned, sag-free and secure",
+                  "Retractable or fixed to suit",
+                  "Coast-rated fabrics and fixings"
                 ]
               }
             ]
@@ -266,36 +320,36 @@
             ],
             "types": [
               {
-                "slug": "stone-kitchens",
-                "label": "Stone-built kitchens",
-                "phrase": "A kitchen that will outlive the appliances.",
-                "blurb": "Masonry counters do not warp, fade or wobble. We build in stone and render, then fit the grill, fridge and storage into a structure made to stay.",
+                "slug": "clad-kitchens",
+                "label": "Stone & porcelain-clad kitchens",
+                "phrase": "Marble/granite worktops, microcement.",
+                "blurb": "A clad masonry kitchen does not warp, fade or wobble. We build in stone, porcelain and microcement, top it with marble or granite cut on site, and fit the appliances into a structure made to stay.",
                 "marks": [
                   "Solid masonry, nothing flat-pack",
-                  "Stone worktops cut on site",
-                  "Appliances swappable in an afternoon"
+                  "Marble or granite worktops, cut on site",
+                  "Stone, porcelain or microcement faces"
                 ]
               },
               {
-                "slug": "covered-terraces",
-                "label": "Covered kitchen terraces",
-                "phrase": "Cook through rain. Cook through August.",
-                "blurb": "A roof over the kitchen doubles the days you use it. We integrate structure, extraction, light and power so cooking outside feels as easy as inside.",
+                "slug": "built-in-bbq",
+                "label": "Built-in barbecues & wood-fired ovens",
+                "phrase": "Barbacoa de obra, horno de leña, kamado.",
+                "blurb": "Real cooking deserves real fire. We build in charcoal barbacoas, wood-fired ovens and kamados, with the clearances, flues and prep space designed around how you actually cook.",
                 "marks": [
-                  "All-weather cooking, all year",
-                  "Light where you actually chop",
-                  "Smoke and heat managed by design"
+                  "Barbacoa de obra, horno de leña, kamado",
+                  "Heat-safe clearances and flues",
+                  "Prep and storage where you need them"
                 ]
               },
               {
-                "slug": "grill-stations",
-                "label": "Compact grill stations",
-                "phrase": "Small footprint. Full menu.",
-                "blurb": "Not every terrace needs an island. A well-planned two-metre station holds the grill, the prep and the storage without crowding the table.",
+                "slug": "grill-islands",
+                "label": "Stainless-steel & modular grill islands",
+                "phrase": "Stainless steel, modular.",
+                "blurb": "When you want a quicker route to cooking outside, a stainless modular island delivers it. Marine-grade units drop into a built island, serviceable and swappable without rebuilding the kitchen.",
                 "marks": [
-                  "Everything within one step",
-                  "Built-in storage, no clutter",
-                  "Sized to your terrace, not a catalogue"
+                  "Marine-grade stainless steel",
+                  "Modular, swappable units",
+                  "Everything within one step"
                 ]
               }
             ]
@@ -313,36 +367,36 @@
             ],
             "types": [
               {
-                "slug": "path-lighting",
-                "label": "Path & garden lighting",
-                "phrase": "You never see the fitting. You always see the way.",
-                "blurb": "Good path light sits low, warm and shielded. We aim it at stone and planting, never at eyes, so the garden reads beautifully after dark.",
+                "slug": "architectural-uplighting",
+                "label": "Architectural & uplighting",
+                "phrase": "Trees, palms, façades, wall-wash.",
+                "blurb": "Uplighting turns trees, palms and walls into the night view. We balance angle and intensity on site, after dark, so the architecture glows without a single hotspot.",
+                "marks": [
+                  "Angles set at night, on site",
+                  "Trees, palms and façade in balance",
+                  "Glare-free, warm white"
+                ]
+              },
+              {
+                "slug": "path-step-lighting",
+                "label": "Path, bollard & step lighting",
+                "phrase": "Balizas, in-ground spots.",
+                "blurb": "Good path light sits low, warm and shielded. We light the way with bollards, in-ground spots and step lighting aimed at stone and planting, never at eyes.",
                 "marks": [
                   "Glare-free, shielded fittings",
-                  "Warm white, never blue",
+                  "Bollards, in-ground and step lights",
                   "Cabling buried and protected"
                 ]
               },
               {
-                "slug": "festoon",
-                "label": "Festoon & pergola lights",
-                "phrase": "Party lights, engineered like permanent ones.",
-                "blurb": "Festoon looks casual; ours is fixed properly. Tensioned catenary wires, outdoor-rated cable and dimming that takes the terrace from dinner to dancing.",
+                "slug": "festoon-smart-lighting",
+                "label": "Festoon, underwater & smart low-voltage systems",
+                "phrase": "Festoon, underwater, smart control.",
+                "blurb": "From festoon over the terrace to lights under the water, we build it on safe low-voltage systems you control from your phone. Tensioned lines, rated fittings and scenes that take the garden from dinner to midnight.",
                 "marks": [
-                  "Tensioned, sag-free lines",
-                  "Dimmable warm light",
-                  "Rated for coastal weather"
-                ]
-              },
-              {
-                "slug": "uplighting",
-                "label": "Architectural uplighting",
-                "phrase": "Your house, lit like it deserves.",
-                "blurb": "Uplighting turns walls and trees into the night view. We balance angles and intensity so the architecture glows without a single hotspot.",
-                "marks": [
-                  "Angles set at night, on site",
-                  "Trees and façade in balance",
-                  "Scenes you control from your phone"
+                  "Safe low-voltage throughout",
+                  "Festoon and underwater rated for the coast",
+                  "Smart scenes from your phone"
                 ]
               }
             ]
@@ -365,36 +419,36 @@
             ],
             "types": [
               {
-                "slug": "courtyard-fountains",
-                "label": "Courtyard fountains",
-                "phrase": "The sound that makes a courtyard.",
-                "blurb": "A fountain should murmur, not splash the paving. We tune nozzles, depths and pump speed by ear, then hide the filtration where you will never see it.",
+                "slug": "stone-fountains",
+                "label": "Stone, marble & ceramic fountains",
+                "phrase": "Carved stone, Macael, azulejo, tinajas.",
+                "blurb": "A carved fountain should murmur, not splash the paving. We work in Macael marble, carved stone, azulejo and tinajas, tuning nozzles and pump by ear and hiding the filtration where you will never see it.",
                 "marks": [
+                  "Carved stone, Macael, azulejo, tinajas",
                   "Tuned by ear, on site",
-                  "Hidden pumps and filtration",
-                  "Stone that loves water"
+                  "Hidden pumps and filtration"
                 ]
               },
               {
                 "slug": "water-walls",
-                "label": "Modern water walls",
-                "phrase": "A moving wall, quiet as rain.",
-                "blurb": "Water walls live or die on even flow. We machine the weir true, light it from below and design access so maintenance takes minutes, not a project.",
+                "label": "Water walls & blades",
+                "phrase": "Corten, stone, microcement.",
+                "blurb": "Water walls and blades live or die on even flow. We machine the weir true, face it in corten, stone or microcement, light it from below and design access so upkeep takes minutes.",
                 "marks": [
                   "Perfectly even weir flow",
-                  "Lit from within at night",
-                  "Service access designed in"
+                  "Corten, stone or microcement face",
+                  "Lit from within, service access designed in"
                 ]
               },
               {
                 "slug": "reflecting-pools",
-                "label": "Reflecting pools",
-                "phrase": "Still water. Twice the garden.",
-                "blurb": "A reflecting pool doubles your best view. We build it dead level with a dark interior, a fine overflow edge and filtration sized for stillness.",
+                "label": "Reflecting pools, rills & bubblers",
+                "phrase": "Espejos de agua, acequias.",
+                "blurb": "Still water doubles your best view; a rill carries it through the garden. We build reflecting pools dead level with dark linings, and run rills and bubblers with filtration sized for stillness.",
                 "marks": [
                   "Dead level, edge to edge",
                   "Dark linings for a true mirror",
-                  "Quiet, oversized filtration"
+                  "Rills and bubblers, quiet filtration"
                 ]
               }
             ]
@@ -412,36 +466,36 @@
             ],
             "types": [
               {
+                "slug": "drip-micro-spray",
+                "label": "Drip & micro-spray systems",
+                "phrase": "Riego por goteo — beds, planters, subsurface.",
+                "blurb": "Borders and planters want gentle, precise water. Drip and micro-spray deliver it at soil level, plant by plant — above ground or subsurface — with the filtering and pressure control that keep emitters alive.",
+                "marks": [
+                  "Plant-by-plant, beds and planters",
+                  "Surface or subsurface drip",
+                  "Filtered and pressure-regulated"
+                ]
+              },
+              {
                 "slug": "sprinkler-zones",
-                "label": "Lawn sprinkler zones",
-                "phrase": "Every blade watered. Not a drop on the path.",
-                "blurb": "Lawn zones are geometry. We plan head positions for true head-to-head coverage, then balance run times to your soil and Andalucía's watering rules.",
+                "label": "Pop-up sprinkler zones",
+                "phrase": "Head-to-head, no dry spots.",
+                "blurb": "Lawn zones are geometry. We plan pop-up head positions for true head-to-head coverage, fit commercial-grade heads flush with the lawn, then balance run times to your soil and the local water rules.",
                 "marks": [
                   "Head-to-head coverage, no dry spots",
-                  "Zoned for sun and shade",
+                  "Commercial-grade pop-up heads",
                   "Schedules within local water rules"
                 ]
               },
               {
-                "slug": "pop-up-heads",
-                "label": "Pop-up heads & hardware",
-                "phrase": "Invisible until six in the morning.",
-                "blurb": "Hardware decides whether a system lasts. We fit commercial-grade pop-up heads and valves, flush with the lawn, serviceable without digging.",
+                "slug": "smart-controllers",
+                "label": "Smart controllers, sensors & water-saving",
+                "phrase": "WiFi, rain sensors, greywater, fertigation.",
+                "blurb": "The controller is where the water is saved. We fit WiFi controllers, rain and soil sensors, and where it makes sense greywater and fertigation, so the garden takes only what it needs.",
                 "marks": [
-                  "Commercial-grade heads and valves",
-                  "Flush with the lawn when down",
-                  "Serviceable without digging"
-                ]
-              },
-              {
-                "slug": "micro-spray",
-                "label": "Bed & border micro-spray",
-                "phrase": "Water at the roots, not on the leaves.",
-                "blurb": "Borders want gentle, precise water. Drip and micro-spray deliver it at soil level, plant by plant, with the filtering and pressure control that keep emitters alive.",
-                "marks": [
-                  "Plant-by-plant delivery",
-                  "Filtered and pressure-regulated",
-                  "Less water, better borders"
+                  "WiFi control, rain and soil sensors",
+                  "Greywater and fertigation ready",
+                  "Less water, healthier planting"
                 ]
               }
             ]
@@ -459,36 +513,36 @@
             ],
             "types": [
               {
-                "slug": "pool-side",
-                "label": "Pool-side turf",
-                "phrase": "Green at the water's edge. All year.",
-                "blurb": "Pool-side turf has to handle splash, sun and bare feet. We use cool-touch premium turf on a drained base, with edges that meet the coping perfectly.",
-                "marks": [
-                  "Cool-touch, barefoot-friendly pile",
-                  "Chlorine and UV resistant",
-                  "Edges fitted to the coping"
-                ]
-              },
-              {
-                "slug": "roof-terraces",
-                "label": "Roof terraces & courtyards",
-                "phrase": "A lawn where a lawn is impossible.",
-                "blurb": "Roofs and courtyards get green without soil or weight problems. We protect the waterproofing, sort the drainage and finish the edges so it reads as a lawn, not a carpet.",
-                "marks": [
-                  "Light, membrane-safe build-up",
-                  "Drainage that protects the roof",
-                  "Invisible perimeter fixing"
-                ]
-              },
-              {
-                "slug": "natural-finish",
-                "label": "Natural-look finishes",
-                "phrase": "Guests will kneel down to check.",
-                "blurb": "The difference is in the details: mixed pile heights, a brushed-in infill and seams you cannot find. From the terrace it is simply a perfect lawn.",
+                "slug": "premium-turf",
+                "label": "Natural-look premium turf",
+                "phrase": "High pile, shade-tolerant.",
+                "blurb": "The difference is in the details: mixed pile heights, mixed tones and a brushed-in infill. On a properly built base it reads as a perfect lawn — green in August, convincing on hands and knees.",
                 "marks": [
                   "Mixed-tone, multi-height pile",
-                  "Seams you cannot find",
-                  "Brushed and finished by hand"
+                  "Shade-tolerant, UV-stable",
+                  "Seams you cannot find"
+                ]
+              },
+              {
+                "slug": "poolside-pet-turf",
+                "label": "Pool-side & pet-friendly turf",
+                "phrase": "Non-slip, chlorine-resistant.",
+                "blurb": "Around the pool and the dogs, turf has to handle splash, chlorine and paws. We use cool-touch, non-slip turf on a free-draining base that rinses clean and stays hygienic.",
+                "marks": [
+                  "Non-slip, cool-touch pile",
+                  "Chlorine- and pet-resistant",
+                  "Free-draining, rinses clean"
+                ]
+              },
+              {
+                "slug": "sports-turf",
+                "label": "Putting-green, roof-terrace & sports turf",
+                "phrase": "Short pile, lightweight.",
+                "blurb": "Putting greens, roof terraces and play areas need a tighter, lighter turf. We build true-rolling short-pile surfaces and membrane-safe, lightweight build-ups where weight and drainage matter.",
+                "marks": [
+                  "True-rolling short pile",
+                  "Light, membrane-safe build-up",
+                  "Drainage that protects the roof"
                 ]
               }
             ]
@@ -511,10 +565,21 @@
             ],
             "types": [
               {
+                "slug": "iron-gates",
+                "label": "Wrought-iron gates & ironwork",
+                "phrase": "Hierro forjado, rejería, railings, grilles.",
+                "blurb": "Iron should feel substantial and swing like a door. We forge gates, railings, rejería and grilles, balance every leaf, weld clean and galvanise before painting so the coast cannot get a grip.",
+                "marks": [
+                  "Hierro forjado, rejería and grilles",
+                  "Galvanised before painting",
+                  "Balanced to swing one-handed"
+                ]
+              },
+              {
                 "slug": "timber-gates",
-                "label": "Carved timber gates",
-                "phrase": "Joinery first. Decoration second.",
-                "blurb": "A timber gate moves with the seasons; ours are built to allow it. Proper joinery, breathable finishes and hardware set for decades of daily swings.",
+                "label": "Timber & timber-steel gates",
+                "phrase": "Carved, combination.",
+                "blurb": "A timber gate moves with the seasons; ours are built to allow it. Proper joinery — often over a hidden steel frame — breathable finishes and hardware set for decades of daily swings.",
                 "marks": [
                   "Traditional joinery, hidden steel",
                   "Finishes that feed the timber",
@@ -522,25 +587,14 @@
                 ]
               },
               {
-                "slug": "iron-gates",
-                "label": "Wrought-iron gates",
-                "phrase": "Heavy where it matters. Effortless where you touch it.",
-                "blurb": "Iron should feel substantial and swing like a door. We balance every leaf, weld clean and galvanise before painting so the coast cannot get a grip.",
+                "slug": "modern-gates",
+                "label": "Aluminium, corten & modern metal gates",
+                "phrase": "Laser-cut, automated sliding.",
+                "blurb": "Modern entrances want clean lines and quiet automation. We build in aluminium, corten and laser-cut steel, on sliding or swing automation set up to run smoothly every day for years.",
                 "marks": [
-                  "Galvanised before painting",
-                  "Balanced to swing one-handed",
-                  "Welds dressed clean"
-                ]
-              },
-              {
-                "slug": "ironwork",
-                "label": "Railings & entrance ironwork",
-                "phrase": "The details guests touch first.",
-                "blurb": "Railings, numbers, letterboxes and lanterns: the small ironwork that finishes an entrance. We match it to the gate so the whole arrival reads as one design.",
-                "marks": [
-                  "Matched to the gate's language",
-                  "Fixed into the masonry, not onto it",
-                  "Primed and painted for salt air"
+                  "Aluminium, corten, laser-cut steel",
+                  "Sliding or swing automation",
+                  "Access control built in"
                 ]
               }
             ]
@@ -559,35 +613,35 @@
             "types": [
               {
                 "slug": "slatted",
-                "label": "Modern slatted fencing",
-                "phrase": "Privacy you can still breathe through.",
-                "blurb": "Slatted screens give privacy without building a wall. We set the spacing for your sightlines, fix invisibly and keep the lines arrow-straight over any terrain.",
+                "label": "Slatted fencing",
+                "phrase": "Aluminium, timber, composite/WPC.",
+                "blurb": "Slatted screens give privacy without building a wall. We set the spacing for your sightlines, fix invisibly and keep the lines arrow-straight over any terrain, in aluminium, timber or composite.",
                 "marks": [
+                  "Aluminium, timber or composite",
                   "Spacing tuned to sightlines",
-                  "Hidden fixings throughout",
-                  "Dead-straight lines on sloping ground"
+                  "Hidden fixings, dead-straight lines"
                 ]
               },
               {
-                "slug": "climber-walls",
-                "label": "Walls with climbers",
-                "phrase": "A boundary that flowers.",
-                "blurb": "Masonry for security, planting for softness. We render the wall, build in the wires and choose climbers that thrive on this coast.",
+                "slug": "walls-screens",
+                "label": "Walls & screens",
+                "phrase": "Rendered, stone-clad, gabion, corten.",
+                "blurb": "A boundary wall should read as part of the garden. We build and face them in render, stone, gabion or corten, with the structure engineered first and the planting designed to soften every line.",
                 "marks": [
-                  "Wires and supports built in",
-                  "Render that takes the climate",
-                  "Climbers chosen for the coast"
+                  "Rendered, stone-clad, gabion or corten",
+                  "Engineered to retain and drain",
+                  "Planting designed to soften it"
                 ]
               },
               {
-                "slug": "screens",
-                "label": "Boundary lines & screens",
-                "phrase": "Good fences, invisible from the sunlounger.",
-                "blurb": "Some boundaries should disappear. We run honest, durable lines where they are seen and clever screens where they are not, so the garden feels bigger than the plot.",
+                "slug": "cane-glass-screening",
+                "label": "Cane, glass & mesh screening",
+                "phrase": "Cañizo, pool glass, laser-cut.",
+                "blurb": "Some screens should barely register. Natural cañizo, frameless pool glass and laser-cut panels filter wind and eyes while keeping the view, fixed properly so nothing rattles on this coast.",
                 "marks": [
-                  "Sightlines planned from the terrace",
-                  "Durable, low-upkeep materials",
-                  "Levels handled cleanly on slopes"
+                  "Cañizo, frameless glass, laser-cut",
+                  "Filters wind without losing the view",
+                  "Coast-rated, rattle-free fixings"
                 ]
               }
             ]
@@ -621,11 +675,32 @@
         "desc": "We hand it over finished, and we stay close to keep it perfect."
       }
     ],
-    "areasTitle": "Where we work",
-    "areas": ["Marbella", "Estepona", "Mijas", "Benahavís", "Sotogrande"],
-    "areasNote": "Based on the Costa del Sol. Projects on Ibiza and in the United Kingdom by arrangement.",
-    "ctaTitle": "Tell us what you want to build.",
-    "ctaSub": "Send a few photos of your space and we will come back with ideas and a clear quote.",
+    "areasEyebrow": "On the ground",
+    "areasTitle": "Three bases. One team.",
+    "bases": [
+      {
+        "name": "United Kingdom",
+        "tag": "Office & team",
+        "role": "Where the craft began",
+        "detail": "Seventeen years shaping and caring for some of Britain's finest properties. The studio and the standard everything else is held to."
+      },
+      {
+        "name": "Costa del Sol",
+        "tag": "Office & team",
+        "role": "Our Mediterranean base",
+        "detail": "A full crew on the coast, on site all year, from Marbella to Sotogrande.",
+        "places": ["Marbella", "Estepona", "Mijas", "Benahavís", "Sotogrande"]
+      },
+      {
+        "name": "Mallorca",
+        "tag": "Office & team",
+        "role": "Island base",
+        "detail": "A dedicated island team, caring for Mallorca's most private estates the year round."
+      }
+    ],
+    "ctaEyebrow": "Start your project",
+    "ctaTitle": "Let's build something that lasts.",
+    "ctaSub": "Tell us about your space and send a few photos. Our team comes back with ideas, materials and a clear, fixed quote.",
     "back": "Back to home"
   },
   "maintenancePage": {
@@ -698,7 +773,7 @@
     ],
     "planEyebrow": "Tailored to you",
     "planTitle": "Tailored to your home — by the visit, or all year round.",
-    "planBody": "No two properties are alike — a clifftop villa on Ibiza and a golf-side estate in Sotogrande need very different care. So we don't sell packages off a shelf. Some owners call us for a single job — a one-off tidy before guests arrive, a tree taken down, a terrace brought back to life. Others want us there all year, one familiar team quietly keeping everything beyond the walls in order. Either way, we walk your property with you, listen to how you live in it, and tailor everything to your home personally — drawing on the five disciplines above, visit by visit and season by season. The price reflects your home, never a tier; and as your property changes, what we do quietly changes with it.",
+    "planBody": "No two properties are alike — a clifftop villa on Mallorca and a golf-side estate in Sotogrande need very different care. So we don't sell packages off a shelf. Some owners call us for a single job — a one-off tidy before guests arrive, a tree taken down, a terrace brought back to life. Others want us there all year, one familiar team quietly keeping everything beyond the walls in order. Either way, we walk your property with you, listen to how you live in it, and tailor everything to your home personally — drawing on the five disciplines above, visit by visit and season by season. The price reflects your home, never a tier; and as your property changes, what we do quietly changes with it.",
     "planSteps": [
       {
         "title": "We visit",
@@ -736,7 +811,7 @@
     "regionLegend": "Where is the property?",
     "regions": {
       "costa": { "name": "Costa del Sol", "note": "Marbella to Sotogrande" },
-      "ibiza": { "name": "Ibiza", "note": "Across the island" },
+      "mallorca": { "name": "Mallorca", "note": "Across the island" },
       "uk": { "name": "United Kingdom", "note": "Where it all began" }
     },
     "serviceLegend": "What can we help with?",

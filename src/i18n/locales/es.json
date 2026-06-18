@@ -7,10 +7,10 @@
   },
   "hero": {
     "eyebrow": "Diecisiete años de oficio",
-    "locations": "Reino Unido · Ibiza · Costa del Sol",
+    "locations": "Reino Unido · Mallorca · Costa del Sol",
     "title1": "Donde el oficio británico",
     "title2": "se encuentra con el Mediterráneo.",
-    "sub": "Durante diecisiete años hemos creado y cuidado algunas de las mejores propiedades de Gran Bretaña. Hoy, nuestro oficio está en casa en Ibiza y la Costa del Sol.",
+    "sub": "Durante diecisiete años hemos creado y cuidado algunas de las mejores propiedades de Gran Bretaña. Hoy, nuestro oficio está en casa en Mallorca y la Costa del Sol.",
     "ctaPrimary": "Pedir presupuesto",
     "ctaSecondary": "Descubra nuestros servicios",
     "scroll": "Deslice"
@@ -19,7 +19,7 @@
     "eyebrow": "Nuestro estándar",
     "line1": "Construido como si fuera nuestro.",
     "line2": "Cuidado como si viviéramos allí.",
-    "body": "Diecisiete años de oficio británico fijaron nuestro estándar. La Costa del Sol e Ibiza son donde lo mantenemos: un solo equipo, del primer boceto a la visita de cada viernes.",
+    "body": "Diecisiete años de oficio británico fijaron nuestro estándar. La Costa del Sol y Mallorca son donde lo mantenemos: un solo equipo, del primer boceto a la visita de cada viernes.",
     "imageAlt": "Una terraza de piedra terminada en la Costa del Sol con luz dorada",
     "stats": [
       { "v": "17", "k": "Años de oficio británico" },
@@ -47,6 +47,7 @@
   },
   "locations": {
     "eyebrow": "Dónde trabajamos",
+    "imageAlt": "Vista aérea del litoral mediterráneo que cuidamos",
     "title": "Tres costas. Un mismo estándar.",
     "titleLine1": "Tres costas.",
     "titleLine2": "Un mismo estándar.",
@@ -54,14 +55,20 @@
       "name": "Reino Unido",
       "desc": "Donde empezó todo: diecisiete años de oficio exterior refinado."
     },
-    "ibiza": {
-      "name": "Ibiza",
-      "desc": "Cuidado discreto, todo el año, para las fincas más privadas de la isla."
+    "mallorca": {
+      "name": "Mallorca",
+      "desc": "Terrazas, piscinas y jardines mediterráneos, diseñados y construidos para las fincas más privadas de la isla."
     },
     "costa": {
       "name": "Costa del Sol",
-      "desc": "De Marbella a Sotogrande, cuidado integral de propiedades en la costa."
+      "desc": "De Marbella a Nerja, pasando por Málaga, piedra natural, agua y vegetación convertidas en jardines que perduran."
     }
+  },
+  "network": {
+    "eyebrow": "Parte de una red de confianza",
+    "title": "Un grupo de especialistas detrás de cada proyecto.",
+    "sub": "Formamos parte de una familia más amplia de empresas, cada una especialista en su oficio. Juntas nos permiten construir, plantar y mantener con un mismo estándar.",
+    "visit": "Ver web"
   },
   "cta": {
     "title": "Su propiedad, sin esfuerzo.",
@@ -81,7 +88,7 @@
       "Custodia de llaves e inspecciones"
     ],
     "contact": "Contacto",
-    "areas": "Reino Unido · Ibiza · Costa del Sol",
+    "areas": "Reino Unido · Mallorca · Costa del Sol",
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de privacidad",
     "legal": "Aviso legal"
@@ -120,83 +127,130 @@
             ],
             "types": [
               {
-                "slug": "travertine",
-                "label": "Travertino y piedra natural",
-                "phrase": "Fresco bajo los pies en agosto. Nivelado para décadas.",
-                "blurb": "El travertino se deja pisar en pleno verano y mejora con los años. Asentamos cada losa sobre una base compactada y drenada, y rematamos los cantos a mano.",
+                "slug": "porcelain-paving",
+                "label": "Porcelánico",
+                "phrase": "Gran formato, 20 mm.",
+                "blurb": "El porcelánico de gran formato de 20 mm da un suelo casi sin juntas, muy resistente, que aguanta sol, heladas y químicos de piscina. Lo colocamos perfectamente plano sobre base drenada, con juntas mínimas y pendientes invisibles.",
                 "marks": [
-                  "Nivelado al milímetro",
-                  "Sellado contra sol y sal",
-                  "Colocado sobre buen drenaje"
+                  "Gran formato, juntas mínimas",
+                  "Antihielo, antimanchas y antideslizante",
+                  "Colocado a nivel sobre base drenada"
                 ]
               },
               {
-                "slug": "white-terraces",
-                "label": "Terrazas blancas mediterráneas",
-                "phrase": "Luminosas de día. Encendidas al atardecer.",
-                "blurb": "La cal y la piedra clara aprovechan la luz andaluza. Las construimos para conservar ese brillo: materiales honestos, pendientes limpias, nada improvisado bajo la superficie.",
+                "slug": "natural-stone",
+                "label": "Piedra natural",
+                "phrase": "Travertino, mármol, caliza y granito.",
+                "blurb": "Travertino, mármol, caliza y granito envejecen de maravilla cuando se asientan y rematan bien. Cortamos, colocamos y sellamos cada losa para que el suelo siga fresco bajo los pies y nivelado durante décadas.",
                 "marks": [
-                  "Acabados transpirables a la cal",
-                  "Pendientes que evacuan la lluvia",
+                  "Travertino, mármol, caliza, granito",
+                  "Sellado contra sol y sal",
                   "Cantos y coronaciones a mano"
                 ]
               },
               {
-                "slug": "flagstone",
-                "label": "Lajas y opus incertum",
-                "phrase": "Irregular por diseño. Preciso por costumbre.",
-                "blurb": "El opus incertum solo parece espontáneo cuando cada junta está pensada. Cortamos y ajustamos cada laja para que el dibujo fluya y el plano quede perfecto.",
+                "slug": "decking",
+                "label": "Tarima de composite y madera",
+                "phrase": "Bordes de piscina, terrazas elevadas.",
+                "blurb": "La tarima calienta una terraza y vuela un nivel sobre suelo irregular. Construimos la subestructura para durar en esta costa y elegimos composite o madera dura según la piscina, el sol y el mantenimiento que desee.",
                 "marks": [
-                  "Juntas rejuntadas para durar",
-                  "Cada laja cortada a su vecina",
-                  "Tan plano como un comedor"
+                  "Subestructura ventilada y calculada",
+                  "Composite o madera dura a elegir",
+                  "Fijaciones ocultas, cantos limpios"
                 ]
               }
             ]
           },
           {
-            "slug": "walls-steps",
-            "title": "Muros de contención y escaleras",
-            "desc": "Niveles, escaleras y bancales que convierten una pendiente en un rasgo de carácter.",
-            "body": "Las parcelas en pendiente esconden las mejores vistas. Muros, escaleras y bancales convierten un desnivel incómodo en estancias exteriores útiles y espectaculares.",
+            "slug": "retaining-walls",
+            "title": "Muros de contención",
+            "desc": "Muros estructurales que sujetan la pendiente y convierten el desnivel en un rasgo de carácter.",
+            "body": "Las parcelas en pendiente esconden las mejores vistas. Los muros de contención, calculados con ingeniería, domestican un desnivel incómodo y se integran en el diseño: revestidos, revocados o con caras singulares según la casa.",
             "details": [
-              "Muros de contención estructurales",
-              "Escaleras y descansos singulares",
-              "Bancales y jardineras",
-              "Revestimientos de piedra"
+              "Contención estructural calculada",
+              "Drenaje y espacio de raíz integrados",
+              "Revestimiento de piedra, revoco y caras singulares",
+              "Jardineras y bancos integrados"
             ],
             "types": [
               {
-                "slug": "stairways",
-                "label": "Escalinatas de jardín",
-                "phrase": "Cada peldaño cae justo donde el pie lo espera.",
-                "blurb": "Una buena escalinata desaparece al caminarla. Damos a las tabicas un ritmo constante y a las huellas una profundidad generosa, y las iluminamos para que el jardín acompañe la subida.",
+                "slug": "natural-stone-walls",
+                "label": "Muros de piedra natural y piedra seca",
+                "phrase": "Aplacado de piedra, piedra seca, pizarra.",
+                "blurb": "Apilados y aplacados a mano, los muros de piedra seca y cara de piedra arraigan la casa en el paisaje andaluz. Construimos la estructura para contener y la cara para durar, hilada a hilada.",
+                "marks": [
+                  "Caras de piedra colocadas a mano",
+                  "Núcleos calculados y drenados",
+                  "Envejece con el paisaje"
+                ]
+              },
+              {
+                "slug": "rendered-walls",
+                "label": "Muros revocados y encalados",
+                "phrase": "Encalado, hormigón visto con encofrado de tabla.",
+                "blurb": "El revoco de cal liso y el hormigón con encofrado de tabla dan al muro una cara serena y moderna. Usamos acabados transpirables y aptos para la costa, para que el blanco siga luminoso y la superficie sana.",
+                "marks": [
+                  "Acabados transpirables a la cal",
+                  "Textura nítida de encofrado de tabla",
+                  "Pendientes que evacuan la lluvia"
+                ]
+              },
+              {
+                "slug": "feature-walls",
+                "label": "Muros revestidos y singulares",
+                "phrase": "Travertino, porcelánico, gavión, corten.",
+                "blurb": "Cuando el muro se convierte en la vista, manda el revestimiento. Travertino, porcelánico, gavión y corten: sobre una estructura calculada para soportarlos sin una sola grieta.",
+                "marks": [
+                  "Revestimientos singulares, a plomo",
+                  "Subestructura preparada para la carga",
+                  "Materiales a juego con la casa"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "steps",
+            "title": "Escaleras",
+            "desc": "Tramos y escalinatas que hacen que cada cambio de nivel resulte natural.",
+            "body": "Una buena escalera desaparece al caminarla. Damos a las tabicas un ritmo constante y a las huellas una profundidad generosa, y luego las formamos e iluminamos para que el jardín te acompañe entre niveles.",
+            "details": [
+              "Ritmo constante de tabica",
+              "Huellas antideslizantes, a mano",
+              "Iluminación de peldaño integrada",
+              "Formas rectas, curvas o voladas"
+            ],
+            "types": [
+              {
+                "slug": "straight-flights",
+                "label": "Tramos rectos y aterrazados",
+                "phrase": "Lineal, a media altura.",
+                "blurb": "Los tramos rectos y limpios y los descansos a media altura dan a la pendiente un ritmo sereno. Igualamos la altura de cada tabica para que la subida resulte natural bajo los pies.",
                 "marks": [
                   "Ritmo constante de tabica",
-                  "Huellas antideslizantes, a mano",
-                  "Preparadas para luz integrada"
+                  "Huellas amplias y niveladas",
+                  "Descansos que parten la subida"
                 ]
               },
               {
-                "slug": "planting-walls",
-                "label": "Muros de bancal con plantación",
-                "phrase": "El muro sujeta la ladera. La plantación esconde el muro.",
-                "blurb": "Los bancales convierten una pendiente en estancias. Nuestros muros son primero ingeniería y después belleza, con drenaje y espacio de raíz desde el origen.",
-                "marks": [
-                  "Calculados para contener y drenar",
-                  "Bolsillos de plantación de serie",
-                  "Caras de piedra que envejecen bien"
-                ]
-              },
-              {
-                "slug": "sculpted-steps",
-                "label": "Escaleras de piedra esculpidas",
-                "phrase": "Curvas que parecen vertidas, hechas piedra a piedra.",
-                "blurb": "Los peldaños redondeados piden paciencia y buen replanteo. Los formamos en obra, revoco y piedra para que la geometría siga nítida muchos años.",
+                "slug": "curved-steps",
+                "label": "Escaleras curvas y radiales",
+                "phrase": "Envolventes, en abanico.",
+                "blurb": "Las escaleras envolventes y en abanico piden paciencia y buen replanteo. Replanteamos cada curva con plantillas para que la geometría siga nítida y el tramo se lea como un solo gesto.",
                 "marks": [
                   "Replanteo con plantillas, no a ojo",
                   "Núcleos armados bajo cada curva",
-                  "Revocos que resisten la costa"
+                  "Cantos nítidos que aguantan años"
+                ]
+              },
+              {
+                "slug": "floating-steps",
+                "label": "Escaleras voladas y en voladizo",
+                "phrase": "Caja monolítica.",
+                "blurb": "Las huellas en voladizo que parecen flotar son pura ingeniería tras una cara limpia. Construimos primero la estructura oculta y luego la revestimos para que cada peldaño parezca suspendido.",
+                "marks": [
+                  "Voladizo oculto y calculado",
+                  "Detalle monolítico con junta de sombra",
+                  "Iluminación integrada en la contrahuella"
                 ]
               }
             ]
@@ -219,36 +273,36 @@
             ],
             "types": [
               {
-                "slug": "climbing-plant",
-                "label": "Pérgolas con trepadoras",
-                "phrase": "Construida para la buganvilla que cargará en cinco años.",
-                "blurb": "Una pérgola plantada es una estructura con carga futura. Dimensionamos maderas y anclajes para la planta adulta, no para la primera temporada, y resolvemos cada unión contra el viento costero.",
+                "slug": "bioclimatic-pergolas",
+                "label": "Pérgolas bioclimáticas de aluminio",
+                "phrase": "Pérgola bioclimática.",
+                "blurb": "Las lamas motorizadas de aluminio encienden y apagan la sombra con el sol, y se cierran para aguantar una tormenta de verano. Integramos estructura, drenaje, luz y sensores para que se lea como arquitectura, no como un añadido.",
                 "marks": [
-                  "Dimensionada para la planta adulta",
-                  "Herrajes inoxidables o galvanizados",
-                  "Cables y guiado integrados"
+                  "Lamas motorizadas, lluvia y sol",
+                  "Drenaje e iluminación integrados",
+                  "Perfil lacado, apto para la costa"
                 ]
               },
               {
-                "slug": "evening-lounge",
-                "label": "Ambientes de tarde",
-                "phrase": "Donde la tarde va más despacio.",
-                "blurb": "Sombra de día, atmósfera de noche. Combinamos estructura, guirnaldas y muretes de asiento para que la terraza funcione de la siesta a la medianoche.",
+                "slug": "timber-steel-pergolas",
+                "label": "Pérgolas de madera y acero",
+                "phrase": "Hierro forjado, celosías de lama.",
+                "blurb": "Madera, acero y hierro forjado hacen una pérgola que pertenece a la casa. Dimensionamos cada pieza para el viento costero y la plantación adulta que cargará, con celosías de lama donde quiera intimidad.",
                 "marks": [
-                  "Circuitos de luz ocultos en la estructura",
-                  "Corriente y sonido precableados",
-                  "Suelos a nivel, listos para el mobiliario"
+                  "Dimensionada para viento y planta adulta",
+                  "Madera, acero o hierro forjado",
+                  "Celosías de lama integradas"
                 ]
               },
               {
-                "slug": "fire-pit",
-                "label": "Pérgolas de madera con fuego",
-                "phrase": "Cálida en enero. Sólida para siempre.",
-                "blurb": "Un fuego alarga la temporada a doce meses. Construimos el banco, el cerco y la cubierta como una sola pieza, con distancias seguras desde el proyecto.",
+                "slug": "shade-sails",
+                "label": "Velas, toldos y cañizos",
+                "phrase": "Velas, toldos, cañizo.",
+                "blurb": "A veces la sombra debe ser ligera y desmontable. Velas tensadas, toldos retráctiles y techos de cañizo dan cubrición suave por una temporada o para siempre, bien tensados para que nada se descuelgue ni aletee.",
                 "marks": [
-                  "Distancias al fuego de proyecto",
-                  "Bancos integrados en la estructura",
-                  "Madera tratada para intemperie"
+                  "Tensados, sin descuelgues ni aleteo",
+                  "Retráctiles o fijos a elegir",
+                  "Tejidos y herrajes para la costa"
                 ]
               }
             ]
@@ -266,36 +320,36 @@
             ],
             "types": [
               {
-                "slug": "stone-kitchens",
-                "label": "Cocinas de obra",
-                "phrase": "Una cocina que sobrevivirá a los electrodomésticos.",
-                "blurb": "La obra no se alabea ni se destiñe. Construimos en piedra y revoco, y encajamos parrilla, nevera y almacenaje en una estructura hecha para quedarse.",
+                "slug": "clad-kitchens",
+                "label": "Cocinas revestidas de piedra y porcelánico",
+                "phrase": "Encimeras de mármol/granito, microcemento.",
+                "blurb": "Una cocina de obra revestida no se alabea, destiñe ni baila. Construimos en piedra, porcelánico y microcemento, la coronamos con mármol o granito cortado en obra y encajamos los equipos en una estructura hecha para quedarse.",
                 "marks": [
                   "Obra maciza, nada desmontable",
-                  "Encimeras de piedra cortadas en obra",
-                  "Equipos sustituibles en una tarde"
+                  "Encimeras de mármol o granito en obra",
+                  "Caras de piedra, porcelánico o microcemento"
                 ]
               },
               {
-                "slug": "covered-terraces",
-                "label": "Terrazas de cocina cubiertas",
-                "phrase": "Cocinar con lluvia. Cocinar en agosto.",
-                "blurb": "Un techo sobre la cocina duplica los días de uso. Integramos estructura, extracción, luz y corriente para que fuera se cocine tan fácil como dentro.",
+                "slug": "built-in-bbq",
+                "label": "Barbacoas de obra y hornos de leña",
+                "phrase": "Barbacoa de obra, horno de leña, kamado.",
+                "blurb": "Cocinar de verdad merece fuego de verdad. Integramos barbacoas de obra de carbón, hornos de leña y kamados con las distancias, los tiros y el espacio de trabajo pensados según cómo cocina.",
                 "marks": [
-                  "Cocina todo el año, con cualquier tiempo",
-                  "Luz donde de verdad se corta",
-                  "Humo y calor resueltos por diseño"
+                  "Barbacoa de obra, horno de leña, kamado",
+                  "Distancias seguras y tiros resueltos",
+                  "Preparación y almacenaje donde hacen falta"
                 ]
               },
               {
-                "slug": "grill-stations",
-                "label": "Estaciones de parrilla compactas",
-                "phrase": "Poca huella. Menú completo.",
-                "blurb": "No toda terraza necesita una isla. Una estación de dos metros bien pensada reúne parrilla, preparación y almacenaje sin invadir la mesa.",
+                "slug": "grill-islands",
+                "label": "Islas de parrilla de inoxidable y modulares",
+                "phrase": "Acero inoxidable, modular.",
+                "blurb": "Cuando quiere un camino más rápido a cocinar fuera, una isla modular de inoxidable lo resuelve. Módulos de grado marino encajados en una isla de obra, reparables y sustituibles sin rehacer la cocina.",
                 "marks": [
-                  "Todo a un paso",
-                  "Almacenaje integrado, sin trastos",
-                  "A medida de su terraza, no de un catálogo"
+                  "Acero inoxidable de grado marino",
+                  "Módulos intercambiables",
+                  "Todo a un paso"
                 ]
               }
             ]
@@ -313,36 +367,36 @@
             ],
             "types": [
               {
-                "slug": "path-lighting",
-                "label": "Luz de caminos y jardín",
-                "phrase": "La luminaria no se ve. El camino, siempre.",
-                "blurb": "La buena luz de camino es baja, cálida y apantallada. La dirigimos a la piedra y la plantación, nunca a los ojos, para que el jardín se lea precioso de noche.",
+                "slug": "architectural-uplighting",
+                "label": "Arquitectónica y de realce",
+                "phrase": "Árboles, palmeras, fachadas, bañado de muro.",
+                "blurb": "El realce convierte árboles, palmeras y muros en el paisaje nocturno. Equilibramos ángulo e intensidad in situ, de noche, para que la arquitectura brille sin un solo punto quemado.",
+                "marks": [
+                  "Ángulos ajustados de noche, in situ",
+                  "Árboles, palmeras y fachada en equilibrio",
+                  "Blanco cálido, sin deslumbrar"
+                ]
+              },
+              {
+                "slug": "path-step-lighting",
+                "label": "Caminos, balizas y escaleras",
+                "phrase": "Balizas, focos enterrados.",
+                "blurb": "La buena luz de camino es baja, cálida y apantallada. Iluminamos el paso con balizas, focos enterrados y luz de peldaño dirigida a la piedra y la plantación, nunca a los ojos.",
                 "marks": [
                   "Luminarias apantalladas, sin deslumbrar",
-                  "Blanco cálido, nunca azulado",
+                  "Balizas, empotrables y luz de peldaño",
                   "Cableado enterrado y protegido"
                 ]
               },
               {
-                "slug": "festoon",
-                "label": "Guirnaldas y pérgolas",
-                "phrase": "Luz de fiesta, instalada como la permanente.",
-                "blurb": "La guirnalda parece informal; la nuestra va fijada de verdad. Cables tensados, manguera de exterior y regulación que lleva la terraza de la cena al baile.",
+                "slug": "festoon-smart-lighting",
+                "label": "Guirnaldas, sumergida y sistemas de bajo voltaje",
+                "phrase": "Guirnalda, sumergida, control inteligente.",
+                "blurb": "De la guirnalda sobre la terraza a la luz bajo el agua, lo montamos en sistemas seguros de bajo voltaje que controla desde el móvil. Líneas tensadas, luminarias homologadas y escenas que llevan el jardín de la cena a la medianoche.",
                 "marks": [
-                  "Líneas tensadas, sin descuelgues",
-                  "Luz cálida regulable",
-                  "Aptas para clima costero"
-                ]
-              },
-              {
-                "slug": "uplighting",
-                "label": "Iluminación arquitectónica",
-                "phrase": "Su casa, iluminada como merece.",
-                "blurb": "El bañado de luz convierte muros y árboles en el paisaje nocturno. Equilibramos ángulos e intensidad para que la arquitectura brille sin un solo punto quemado.",
-                "marks": [
-                  "Ángulos ajustados de noche, in situ",
-                  "Fachada y árboles en equilibrio",
-                  "Escenas desde su teléfono"
+                  "Bajo voltaje seguro en todo",
+                  "Guirnalda y sumergida aptas para la costa",
+                  "Escenas inteligentes desde el móvil"
                 ]
               }
             ]
@@ -365,36 +419,36 @@
             ],
             "types": [
               {
-                "slug": "courtyard-fountains",
-                "label": "Fuentes de patio",
-                "phrase": "El sonido que hace al patio.",
-                "blurb": "Una fuente debe murmurar, no salpicar el pavimento. Afinamos boquillas, láminas y bomba de oído, y escondemos la filtración donde nunca la verá.",
+                "slug": "stone-fountains",
+                "label": "Fuentes de piedra, mármol y cerámica",
+                "phrase": "Piedra tallada, Macael, azulejo, tinajas.",
+                "blurb": "Una fuente tallada debe murmurar, no salpicar el pavimento. Trabajamos el mármol de Macael, la piedra tallada, el azulejo y las tinajas, afinamos boquillas y bomba de oído y escondemos la filtración donde nunca la verá.",
                 "marks": [
+                  "Piedra tallada, Macael, azulejo, tinajas",
                   "Afinada de oído, en obra",
-                  "Bombas y filtración ocultas",
-                  "Piedra que ama el agua"
+                  "Bombas y filtración ocultas"
                 ]
               },
               {
                 "slug": "water-walls",
-                "label": "Muros de agua modernos",
-                "phrase": "Un muro en movimiento, silencioso como la lluvia.",
-                "blurb": "Un muro de agua vive de un caudal uniforme. Mecanizamos el vertedero a la perfección, lo iluminamos desde abajo y dejamos el mantenimiento en minutos, no en obras.",
+                "label": "Muros y láminas de agua",
+                "phrase": "Corten, piedra, microcemento.",
+                "blurb": "Los muros y láminas de agua viven de un caudal uniforme. Mecanizamos el vertedero a la perfección, lo revestimos en corten, piedra o microcemento, lo iluminamos desde abajo y dejamos el mantenimiento en minutos.",
                 "marks": [
                   "Caudal perfectamente uniforme",
-                  "Iluminado desde dentro de noche",
-                  "Acceso de servicio previsto"
+                  "Cara de corten, piedra o microcemento",
+                  "Iluminado por dentro, acceso de servicio previsto"
                 ]
               },
               {
                 "slug": "reflecting-pools",
-                "label": "Láminas reflectantes",
-                "phrase": "Agua quieta. El doble de jardín.",
-                "blurb": "Una lámina refleja su mejor vista. La construimos a nivel perfecto, con interior oscuro, rebosadero fino y filtración pensada para la calma.",
+                "label": "Espejos de agua, acequias y borbotones",
+                "phrase": "Espejos de agua, acequias.",
+                "blurb": "El agua quieta dobla su mejor vista; una acequia la lleva por el jardín. Construimos los espejos de agua a nivel perfecto con interior oscuro, y trazamos acequias y borbotones con filtración pensada para la calma.",
                 "marks": [
                   "Nivel perfecto de borde a borde",
                   "Interior oscuro, espejo real",
-                  "Filtración silenciosa y holgada"
+                  "Acequias y borbotones, filtración silenciosa"
                 ]
               }
             ]
@@ -412,36 +466,36 @@
             ],
             "types": [
               {
-                "slug": "sprinkler-zones",
-                "label": "Zonas de aspersión de césped",
-                "phrase": "Cada brizna regada. Ni una gota en el camino.",
-                "blurb": "Las zonas de césped son geometría. Situamos los aspersores para una cobertura real cabeza a cabeza y ajustamos los tiempos a su suelo y a las normas andaluzas.",
+                "slug": "drip-micro-spray",
+                "label": "Goteo y microaspersión",
+                "phrase": "Riego por goteo — parterres, jardineras, subterráneo.",
+                "blurb": "Parterres y jardineras piden agua suave y precisa. El goteo y la microaspersión la dejan a pie de planta —en superficie o enterrado— con el filtrado y la presión que mantienen vivos los emisores.",
                 "marks": [
-                  "Cobertura completa, sin calvas",
-                  "Zonas según sol y sombra",
+                  "Planta a planta, parterres y jardineras",
+                  "Goteo en superficie o subterráneo",
+                  "Filtrado y presión regulada"
+                ]
+              },
+              {
+                "slug": "sprinkler-zones",
+                "label": "Zonas de aspersores emergentes",
+                "phrase": "Cabeza a cabeza, sin calvas.",
+                "blurb": "Las zonas de césped son geometría. Situamos los aspersores emergentes para una cobertura real cabeza a cabeza, a ras de césped y de gama profesional, y ajustamos los tiempos a su suelo y a las normas locales.",
+                "marks": [
+                  "Cobertura cabeza a cabeza, sin calvas",
+                  "Emergentes de gama profesional",
                   "Horarios dentro de la norma local"
                 ]
               },
               {
-                "slug": "pop-up-heads",
-                "label": "Aspersores emergentes",
-                "phrase": "Invisibles hasta las seis de la mañana.",
-                "blurb": "El material decide si un riego dura. Montamos emergentes y válvulas de gama profesional, a ras de césped, reparables sin excavar.",
+                "slug": "smart-controllers",
+                "label": "Programadores, sensores y ahorro de agua",
+                "phrase": "WiFi, sensores de lluvia, aguas grises, fertirrigación.",
+                "blurb": "El programador es donde se ahorra el agua. Montamos programadores WiFi, sensores de lluvia y de suelo y, cuando tiene sentido, aguas grises y fertirrigación, para que el jardín tome solo lo que necesita.",
                 "marks": [
-                  "Material de gama profesional",
-                  "A ras de césped en reposo",
-                  "Servicio sin excavar"
-                ]
-              },
-              {
-                "slug": "micro-spray",
-                "label": "Microaspersión de parterres",
-                "phrase": "Agua en la raíz, no en la hoja.",
-                "blurb": "Los parterres piden agua suave y precisa. Goteo y microaspersión la dejan a pie de planta, con el filtrado y la presión que mantienen vivos los emisores.",
-                "marks": [
-                  "Riego planta a planta",
-                  "Filtrado y presión regulada",
-                  "Menos agua, mejores parterres"
+                  "Control WiFi, sensores de lluvia y suelo",
+                  "Preparado para aguas grises y fertirrigación",
+                  "Menos agua, plantación más sana"
                 ]
               }
             ]
@@ -459,36 +513,36 @@
             ],
             "types": [
               {
-                "slug": "pool-side",
-                "label": "Césped junto a la piscina",
-                "phrase": "Verde al borde del agua. Todo el año.",
-                "blurb": "Junto a la piscina el césped soporta salpicaduras, sol y pies descalzos. Usamos fibra premium de tacto fresco sobre base drenada, con bordes que mueren en la coronación.",
-                "marks": [
-                  "Tacto fresco para ir descalzo",
-                  "Resistente a cloro y rayos UV",
-                  "Bordes ajustados a la coronación"
-                ]
-              },
-              {
-                "slug": "roof-terraces",
-                "label": "Azoteas y patios",
-                "phrase": "Un césped donde el césped es imposible.",
-                "blurb": "Azoteas y patios se vuelven verdes sin tierra ni sobrepeso. Protegemos la impermeabilización, resolvemos el drenaje y rematamos para que parezca césped, no moqueta.",
-                "marks": [
-                  "Montaje ligero, seguro para la tela",
-                  "Drenaje que protege la cubierta",
-                  "Fijación perimetral invisible"
-                ]
-              },
-              {
-                "slug": "natural-finish",
-                "label": "Acabados de aspecto natural",
-                "phrase": "Sus invitados se agacharán a comprobarlo.",
-                "blurb": "La diferencia está en los detalles: alturas de fibra mezcladas, lastre cepillado y juntas imposibles de encontrar. Desde la terraza, simplemente un césped perfecto.",
+                "slug": "premium-turf",
+                "label": "Césped premium de aspecto natural",
+                "phrase": "Fibra alta, tolerante a la sombra.",
+                "blurb": "La diferencia está en los detalles: alturas de fibra mezcladas, tonos variados y lastre cepillado. Sobre una base bien construida se lee como un césped perfecto: verde en agosto y convincente de rodillas.",
                 "marks": [
                   "Fibras de tonos y alturas mezcladas",
-                  "Juntas que no se encuentran",
-                  "Cepillado y rematado a mano"
+                  "Tolerante a la sombra, estable a los UV",
+                  "Juntas que no se encuentran"
+                ]
+              },
+              {
+                "slug": "poolside-pet-turf",
+                "label": "Césped para piscina y mascotas",
+                "phrase": "Antideslizante, resistente al cloro.",
+                "blurb": "Junto a la piscina y con perros, el césped soporta salpicaduras, cloro y patas. Usamos fibra antideslizante de tacto fresco sobre base muy drenante que se enjuaga limpia y se mantiene higiénica.",
+                "marks": [
+                  "Antideslizante, de tacto fresco",
+                  "Resistente al cloro y a las mascotas",
+                  "Muy drenante, se enjuaga limpio"
+                ]
+              },
+              {
+                "slug": "sports-turf",
+                "label": "Putting green, azoteas y césped deportivo",
+                "phrase": "Fibra corta, ligero.",
+                "blurb": "Putting greens, azoteas y zonas de juego piden una fibra más tupida y ligera. Construimos superficies de fibra corta con rodadura uniforme y montajes ligeros y seguros para la tela donde el peso y el drenaje importan.",
+                "marks": [
+                  "Fibra corta de rodadura uniforme",
+                  "Montaje ligero, seguro para la tela",
+                  "Drenaje que protege la cubierta"
                 ]
               }
             ]
@@ -511,10 +565,21 @@
             ],
             "types": [
               {
+                "slug": "iron-gates",
+                "label": "Puertas de hierro forjado y rejería",
+                "phrase": "Hierro forjado, rejería, barandillas, rejas.",
+                "blurb": "El hierro debe sentirse sólido y girar como una puerta de salón. Forjamos puertas, barandillas, rejería y rejas, equilibramos cada hoja, soldamos limpio y galvanizamos antes de pintar para que la costa no haga presa.",
+                "marks": [
+                  "Hierro forjado, rejería y rejas",
+                  "Galvanizado antes de pintar",
+                  "Equilibrada para abrir con una mano"
+                ]
+              },
+              {
                 "slug": "timber-gates",
-                "label": "Puertas de madera tallada",
-                "phrase": "Primero la carpintería. Después el adorno.",
-                "blurb": "La madera se mueve con las estaciones; nuestras puertas lo permiten. Ensambles de oficio, acabados transpirables y herrajes para décadas de uso diario.",
+                "label": "Puertas de madera y madera-acero",
+                "phrase": "Talladas, combinadas.",
+                "blurb": "La madera se mueve con las estaciones; nuestras puertas lo permiten. Ensambles de oficio —a menudo sobre bastidor de acero oculto—, acabados transpirables y herrajes para décadas de uso diario.",
                 "marks": [
                   "Ensambles clásicos, acero oculto",
                   "Acabados que alimentan la madera",
@@ -522,25 +587,14 @@
                 ]
               },
               {
-                "slug": "iron-gates",
-                "label": "Puertas de hierro forjado",
-                "phrase": "Contundente donde importa. Ligera donde se toca.",
-                "blurb": "El hierro debe sentirse sólido y girar como una puerta de salón. Equilibramos cada hoja, soldamos limpio y galvanizamos antes de pintar para que la costa no haga presa.",
+                "slug": "modern-gates",
+                "label": "Puertas de aluminio, corten y metal moderno",
+                "phrase": "Corte láser, corredera automatizada.",
+                "blurb": "Las entradas modernas quieren líneas limpias y automatización silenciosa. Construimos en aluminio, corten y acero cortado a láser, sobre automatización corredera o batiente ajustada para funcionar a diario durante años.",
                 "marks": [
-                  "Galvanizado antes de pintar",
-                  "Equilibrada para abrir con una mano",
-                  "Soldaduras repasadas"
-                ]
-              },
-              {
-                "slug": "ironwork",
-                "label": "Cerrajería de entrada",
-                "phrase": "Los detalles que el invitado toca primero.",
-                "blurb": "Barandillas, números, buzones y faroles: la cerrajería menor que remata una entrada. La igualamos a la puerta para que la llegada se lea como un solo diseño.",
-                "marks": [
-                  "A juego con el lenguaje de la puerta",
-                  "Anclada en la obra, no encima",
-                  "Imprimada y pintada para el salitre"
+                  "Aluminio, corten, acero cortado a láser",
+                  "Automatización corredera o batiente",
+                  "Control de acceso integrado"
                 ]
               }
             ]
@@ -559,35 +613,35 @@
             "types": [
               {
                 "slug": "slatted",
-                "label": "Vallas modernas de lamas",
-                "phrase": "Privacidad que aún respira.",
-                "blurb": "Las lamas dan intimidad sin levantar un muro. Ajustamos la separación a sus vistas, fijamos en oculto y mantenemos las líneas rectas en cualquier terreno.",
+                "label": "Vallas de lamas",
+                "phrase": "Aluminio, madera, composite/WPC.",
+                "blurb": "Las lamas dan intimidad sin levantar un muro. Ajustamos la separación a sus vistas, fijamos en oculto y mantenemos las líneas rectas en cualquier terreno, en aluminio, madera o composite.",
                 "marks": [
+                  "Aluminio, madera o composite",
                   "Separación según las vistas",
-                  "Fijaciones ocultas",
-                  "Líneas rectas incluso en pendiente"
+                  "Fijaciones ocultas, líneas rectas"
                 ]
               },
               {
-                "slug": "climber-walls",
-                "label": "Muros con trepadoras",
-                "phrase": "Un límite que florece.",
-                "blurb": "Obra para la seguridad, plantación para la suavidad. Revocamos el muro, integramos los tensores y elegimos trepadoras que prosperan en esta costa.",
+                "slug": "walls-screens",
+                "label": "Muros y pantallas",
+                "phrase": "Revocado, aplacado de piedra, gavión, corten.",
+                "blurb": "Un muro de cierre debe leerse como parte del jardín. Los construimos y revestimos en revoco, piedra, gavión o corten, con la estructura calculada primero y la plantación pensada para suavizar cada línea.",
                 "marks": [
-                  "Tensores y guías integrados",
-                  "Revoco que aguanta el clima",
-                  "Trepadoras elegidas para la costa"
+                  "Revocado, aplacado de piedra, gavión o corten",
+                  "Calculados para contener y drenar",
+                  "Plantación pensada para suavizar"
                 ]
               },
               {
-                "slug": "screens",
-                "label": "Cierres y pantallas",
-                "phrase": "Buenos cierres, invisibles desde la tumbona.",
-                "blurb": "Algunos límites deben desaparecer. Trazamos líneas honestas donde se ven y pantallas inteligentes donde no, para que el jardín parezca mayor que la parcela.",
+                "slug": "cane-glass-screening",
+                "label": "Cañizo, vidrio y mallas",
+                "phrase": "Cañizo, vidrio de piscina, corte láser.",
+                "blurb": "Algunas pantallas apenas deben notarse. El cañizo natural, el vidrio de piscina sin marco y los paneles cortados a láser filtran el viento y las miradas sin perder la vista, fijados de verdad para que nada vibre en esta costa.",
                 "marks": [
-                  "Vistas planeadas desde la terraza",
-                  "Materiales duraderos, poco mantenimiento",
-                  "Desniveles resueltos con limpieza"
+                  "Cañizo, vidrio sin marco, corte láser",
+                  "Filtra el viento sin perder la vista",
+                  "Fijaciones para la costa, sin vibrar"
                 ]
               }
             ]
@@ -621,11 +675,32 @@
         "desc": "La entregamos terminada, y nos quedamos cerca para mantenerla perfecta."
       }
     ],
-    "areasTitle": "Dónde trabajamos",
-    "areas": ["Marbella", "Estepona", "Mijas", "Benahavís", "Sotogrande"],
-    "areasNote": "Con base en la Costa del Sol. Proyectos en Ibiza y Reino Unido bajo encargo.",
-    "ctaTitle": "Cuéntenos qué quiere construir.",
-    "ctaSub": "Envíenos unas fotos de su espacio y volveremos con ideas y un presupuesto claro.",
+    "areasEyebrow": "Sobre el terreno",
+    "areasTitle": "Tres bases. Un equipo.",
+    "bases": [
+      {
+        "name": "Reino Unido",
+        "tag": "Oficina y equipo",
+        "role": "Donde empezó el oficio",
+        "detail": "Diecisiete años dando forma y cuidando algunas de las mejores propiedades de Gran Bretaña. El estudio y el estándar que mantenemos en todo lo demás."
+      },
+      {
+        "name": "Costa del Sol",
+        "tag": "Oficina y equipo",
+        "role": "Nuestra base mediterránea",
+        "detail": "Un equipo completo en la costa, presente todo el año, de Marbella a Sotogrande.",
+        "places": ["Marbella", "Estepona", "Mijas", "Benahavís", "Sotogrande"]
+      },
+      {
+        "name": "Mallorca",
+        "tag": "Oficina y equipo",
+        "role": "Base en la isla",
+        "detail": "Un equipo dedicado en la isla, cuidando las fincas más privadas de Mallorca durante todo el año."
+      }
+    ],
+    "ctaEyebrow": "Empieza tu proyecto",
+    "ctaTitle": "Construyamos algo que perdure.",
+    "ctaSub": "Cuéntanos sobre tu espacio y envíanos algunas fotos. Nuestro equipo te responde con ideas, materiales y un presupuesto claro y cerrado.",
     "back": "Volver al inicio"
   },
   "maintenancePage": {
@@ -698,7 +773,7 @@
     ],
     "planEyebrow": "Hecho a su medida",
     "planTitle": "A la medida de su casa — por visita o durante todo el año.",
-    "planBody": "No hay dos propiedades iguales — una villa sobre el acantilado en Ibiza y una finca junto al golf en Sotogrande necesitan cuidados muy distintos. Por eso no vendemos paquetes de estantería. Algunos propietarios nos llaman para un trabajo puntual — una puesta a punto antes de recibir invitados, un árbol que retirar, una terraza que devolver a la vida. Otros nos quieren todo el año, un equipo conocido que mantiene en orden, con discreción, todo lo que hay más allá de los muros. En cualquier caso, recorremos su propiedad con usted, escuchamos cómo la vive y lo adaptamos todo a su casa, de forma personal — a partir de las cinco disciplinas anteriores, visita a visita y estación a estación. El precio refleja su casa, nunca una tarifa; y cuando su propiedad cambia, lo que hacemos cambia discretamente con ella.",
+    "planBody": "No hay dos propiedades iguales — una villa sobre el acantilado en Mallorca y una finca junto al golf en Sotogrande necesitan cuidados muy distintos. Por eso no vendemos paquetes de estantería. Algunos propietarios nos llaman para un trabajo puntual — una puesta a punto antes de recibir invitados, un árbol que retirar, una terraza que devolver a la vida. Otros nos quieren todo el año, un equipo conocido que mantiene en orden, con discreción, todo lo que hay más allá de los muros. En cualquier caso, recorremos su propiedad con usted, escuchamos cómo la vive y lo adaptamos todo a su casa, de forma personal — a partir de las cinco disciplinas anteriores, visita a visita y estación a estación. El precio refleja su casa, nunca una tarifa; y cuando su propiedad cambia, lo que hacemos cambia discretamente con ella.",
     "planSteps": [
       {
         "title": "Visitamos",
@@ -736,7 +811,7 @@
     "regionLegend": "¿Dónde está la propiedad?",
     "regions": {
       "costa": { "name": "Costa del Sol", "note": "De Marbella a Sotogrande" },
-      "ibiza": { "name": "Ibiza", "note": "En toda la isla" },
+      "mallorca": { "name": "Mallorca", "note": "En toda la isla" },
       "uk": { "name": "Reino Unido", "note": "Donde empezó todo" }
     },
     "serviceLegend": "¿En qué podemos ayudar?",
