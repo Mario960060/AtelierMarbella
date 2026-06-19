@@ -17,7 +17,9 @@
       "Bash(Sort-Object FullName)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\uuuul\\\\Desktop\" | Where-Object { $_.PSIsContainer } | Select-Object Name)",
       "PowerShell(ls \"C:\\\\Users\\\\uuuul\\\\Desktop\\\\firma hiszpania\" | where {$_.Name -match \"tailwind|vite|tsconfig\"})",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Update website with latest changes and new element galleries *)"
     ]
   }
 }

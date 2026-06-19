@@ -101,7 +101,7 @@ export default function Navbar() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 1.2, ease: EASE }}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-night/92 via-night/82 to-night/72" />
+              <div className="absolute inset-0 bg-gradient-to-b from-night/95 via-night/88 to-night/82" />
             </div>
 
             <div className="relative z-10 flex h-14 items-center justify-between">
@@ -126,7 +126,7 @@ export default function Navbar() {
                     to={l.to}
                     end={l.to === '/'}
                     onClick={() => setOpen(false)}
-                    className="font-serif text-5xl text-limestone"
+                    className="font-serif text-5xl font-medium text-limestone [text-shadow:0_1px_2px_rgba(11,10,7,0.55),0_2px_28px_rgba(11,10,7,0.55)]"
                   >
                     {t(`nav.${l.key}`)}
                   </NavLink>

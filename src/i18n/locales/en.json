@@ -176,7 +176,7 @@
               {
                 "slug": "natural-stone-walls",
                 "label": "Natural stone & dry-stone walls",
-                "phrase": "Stone-clad, piedra seca, slate.",
+                "phrase": "Stone-clad, dry-stone, slate.",
                 "blurb": "Stacked and clad by hand, dry-stone and stone-faced walls root a house in the Andalusian landscape. We build the structure to retain and the face to last, course by course.",
                 "marks": [
                   "Hand-laid stone faces",
@@ -187,7 +187,7 @@
               {
                 "slug": "rendered-walls",
                 "label": "Rendered & whitewashed walls",
-                "phrase": "Encalado, board-formed concrete.",
+                "phrase": "Whitewashed, board-formed concrete.",
                 "blurb": "Smooth lime render and board-formed concrete give walls a calm, modern face. We use breathable, coast-ready finishes so the white stays bright and the surface stays sound.",
                 "marks": [
                   "Breathable lime finishes",
@@ -275,7 +275,7 @@
               {
                 "slug": "bioclimatic-pergolas",
                 "label": "Bioclimatic aluminium pergolas",
-                "phrase": "Pérgola bioclimática.",
+                "phrase": "Bioclimatic, adjustable louvres.",
                 "blurb": "Motorised aluminium louvres turn shade on and off with the sun, then close to shrug off a summer storm. We integrate the structure, drainage, lighting and sensors so it reads as architecture, not an add-on.",
                 "marks": [
                   "Motorised louvres, rain and sun",
@@ -297,7 +297,7 @@
               {
                 "slug": "shade-sails",
                 "label": "Shade sails, awnings & cane roofs",
-                "phrase": "Velas, toldos, cañizo.",
+                "phrase": "Sails, awnings, cane roofs.",
                 "blurb": "Sometimes shade should be light and removable. Tensioned sails, retractable awnings and cane roofs give soft cover for a season or for good, tensioned properly so nothing sags or flaps.",
                 "marks": [
                   "Tensioned, sag-free and secure",
@@ -333,7 +333,7 @@
               {
                 "slug": "built-in-bbq",
                 "label": "Built-in barbecues & wood-fired ovens",
-                "phrase": "Barbacoa de obra, horno de leña, kamado.",
+                "phrase": "Built-in BBQ, wood-fired oven, kamado.",
                 "blurb": "Real cooking deserves real fire. We build in charcoal barbacoas, wood-fired ovens and kamados, with the clearances, flues and prep space designed around how you actually cook.",
                 "marks": [
                   "Barbacoa de obra, horno de leña, kamado",
@@ -380,7 +380,7 @@
               {
                 "slug": "path-step-lighting",
                 "label": "Path, bollard & step lighting",
-                "phrase": "Balizas, in-ground spots.",
+                "phrase": "Bollards, in-ground spots.",
                 "blurb": "Good path light sits low, warm and shielded. We light the way with bollards, in-ground spots and step lighting aimed at stone and planting, never at eyes.",
                 "marks": [
                   "Glare-free, shielded fittings",
@@ -421,7 +421,7 @@
               {
                 "slug": "stone-fountains",
                 "label": "Stone, marble & ceramic fountains",
-                "phrase": "Carved stone, Macael, azulejo, tinajas.",
+                "phrase": "Carved stone, Macael marble, glazed tile, urns.",
                 "blurb": "A carved fountain should murmur, not splash the paving. We work in Macael marble, carved stone, azulejo and tinajas, tuning nozzles and pump by ear and hiding the filtration where you will never see it.",
                 "marks": [
                   "Carved stone, Macael, azulejo, tinajas",
@@ -443,7 +443,7 @@
               {
                 "slug": "reflecting-pools",
                 "label": "Reflecting pools, rills & bubblers",
-                "phrase": "Espejos de agua, acequias.",
+                "phrase": "Reflecting pools, rills.",
                 "blurb": "Still water doubles your best view; a rill carries it through the garden. We build reflecting pools dead level with dark linings, and run rills and bubblers with filtration sized for stillness.",
                 "marks": [
                   "Dead level, edge to edge",
@@ -468,7 +468,7 @@
               {
                 "slug": "drip-micro-spray",
                 "label": "Drip & micro-spray systems",
-                "phrase": "Riego por goteo — beds, planters, subsurface.",
+                "phrase": "Drip lines in beds, planters, subsurface.",
                 "blurb": "Borders and planters want gentle, precise water. Drip and micro-spray deliver it at soil level, plant by plant — above ground or subsurface — with the filtering and pressure control that keep emitters alive.",
                 "marks": [
                   "Plant-by-plant, beds and planters",
@@ -567,7 +567,7 @@
               {
                 "slug": "iron-gates",
                 "label": "Wrought-iron gates & ironwork",
-                "phrase": "Hierro forjado, rejería, railings, grilles.",
+                "phrase": "Wrought iron, ironwork, railings, grilles.",
                 "blurb": "Iron should feel substantial and swing like a door. We forge gates, railings, rejería and grilles, balance every leaf, weld clean and galvanise before painting so the coast cannot get a grip.",
                 "marks": [
                   "Hierro forjado, rejería and grilles",
@@ -636,7 +636,7 @@
               {
                 "slug": "cane-glass-screening",
                 "label": "Cane, glass & mesh screening",
-                "phrase": "Cañizo, pool glass, laser-cut.",
+                "phrase": "Cane, pool glass, laser-cut.",
                 "blurb": "Some screens should barely register. Natural cañizo, frameless pool glass and laser-cut panels filter wind and eyes while keeping the view, fixed properly so nothing rattles on this coast.",
                 "marks": [
                   "Cañizo, frameless glass, laser-cut",
@@ -807,7 +807,7 @@
     "responseTitle": "A reply within one working day",
     "responseBody": "Every enquiry is read by a person, not a queue. We will be in touch personally to arrange a visit or a call.",
     "areasLabel": "Where we work",
-    "areas": "Marbella · Estepona · Mijas · Benahavís · Sotogrande",
+    "areas": "United Kingdom · Costa del Sol · Mallorca",
     "regionLegend": "Where is the property?",
     "regions": {
       "costa": { "name": "Costa del Sol", "note": "Marbella to Sotogrande" },

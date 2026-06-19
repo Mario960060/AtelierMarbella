@@ -89,12 +89,57 @@ export const TYPE_GALLERIES: Record<string, string[]> = {
   'natural-stone-walls': elem('retaining-walls', 'natural-stone-walls', 4),
   'rendered-walls': elem('retaining-walls', 'rendered-walls', 4),
   'feature-walls': elem('retaining-walls', 'feature-walls', 4),
+  // Steps
+  'straight-flights': elem('steps', 'straight-flights', 4),
+  'curved-steps': elem('steps', 'curved-steps', 4),
+  'floating-steps': elem('steps', 'floating-steps', 4),
+  // Pergolas & shade structures
+  'bioclimatic-pergolas': elem('pergolas', 'bioclimatic-pergolas', 4),
+  'timber-steel-pergolas': elem('pergolas', 'timber-steel-pergolas', 4),
+  'shade-sails': elem('pergolas', 'shade-sails', 4),
+  // Outdoor kitchens & BBQ areas
+  'clad-kitchens': elem('outdoor-kitchens', 'clad-kitchens', 4),
+  'built-in-bbq': elem('outdoor-kitchens', 'built-in-bbq', 4),
+  'grill-islands': elem('outdoor-kitchens', 'grill-islands', 4),
+  // Garden lighting
+  'architectural-uplighting': elem('lighting', 'architectural-uplighting', 4),
+  'path-step-lighting': elem('lighting', 'path-step-lighting', 4),
+  'festoon-smart-lighting': elem('lighting', 'festoon-smart-lighting', 4),
+  // Fountains & water features
+  'stone-fountains': elem('water-features', 'stone-fountains', 4),
+  'water-walls': elem('water-features', 'water-walls', 4),
+  'reflecting-pools': elem('water-features', 'reflecting-pools', 4),
+  // Irrigation systems
+  'drip-micro-spray': elem('irrigation', 'drip-micro-spray', 4),
+  'sprinkler-zones': elem('irrigation', 'sprinkler-zones', 4),
+  'smart-controllers': elem('irrigation', 'smart-controllers', 4),
+  // Artificial grass
+  'premium-turf': elem('artificial-grass', 'premium-turf', 4),
+  'poolside-pet-turf': elem('artificial-grass', 'poolside-pet-turf', 4),
+  'sports-turf': elem('artificial-grass', 'sports-turf', 4),
+  // Estate & driveway gates
+  'iron-gates': elem('gates', 'iron-gates', 4),
+  'timber-gates': elem('gates', 'timber-gates', 4),
+  'modern-gates': elem('gates', 'modern-gates', 4),
+  // Fencing & privacy
+  slatted: elem('fencing', 'slatted', 4),
+  'walls-screens': elem('fencing', 'walls-screens', 4),
+  'cane-glass-screening': elem('fencing', 'cane-glass-screening', 4),
 };
 
 // Optional dedicated hero per category page; falls back to the first type cover.
 export const ELEMENT_HEROES: Record<string, string> = {
   terraces: '/images/elements/terraces/hero.jpg',
   'retaining-walls': '/images/elements/retaining-walls/hero.jpg',
+  steps: '/images/elements/steps/hero.jpg',
+  pergolas: '/images/elements/pergolas/hero.jpg',
+  'outdoor-kitchens': '/images/elements/outdoor-kitchens/hero.jpg',
+  lighting: '/images/elements/lighting/hero.jpg',
+  'water-features': '/images/elements/water-features/hero.jpg',
+  irrigation: '/images/elements/irrigation/hero.jpg',
+  'artificial-grass': '/images/elements/artificial-grass/hero.jpg',
+  gates: '/images/elements/gates/hero.jpg',
+  fencing: '/images/elements/fencing/hero.jpg',
 };
 
 /** Gallery for a subcategory — real per-type photos when we have them, else the

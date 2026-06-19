@@ -15,16 +15,15 @@ import {
 import PageShell from '../components/PageShell';
 import { EASE, Reveal } from '../components/Reveal';
 
-/* Fixed (placeholder) contact details — swap for the real numbers later.
-   These mirror the ones shown in the footer. */
+/* Contact details. WhatsApp uses the same UK number. The Spain phone is hidden
+   for now — add phoneEs/phoneEsHref and its row back when a number is confirmed. */
 const CONTACT = {
-  email: 'info@ateliermarbella.com',
-  phoneEs: '+34 600 000 000',
-  phoneEsHref: 'tel:+34600000000',
-  phoneUk: '+44 7000 000000',
-  phoneUkHref: 'tel:+447000000000',
-  whatsapp: '+34 600 000 000',
-  whatsappHref: 'https://wa.me/34600000000',
+  email: 'info@atelier-marbella.com',
+  email2: 'office@atelier-marbella.com',
+  phoneUk: '+44 7809 418879',
+  phoneUkHref: 'tel:+447809418879',
+  whatsapp: '+44 7809 418879',
+  whatsappHref: 'https://wa.me/447809418879',
 };
 
 type Region = 'costa' | 'mallorca' | 'uk';
@@ -127,7 +126,7 @@ export default function Contact() {
     // No backend yet: hand the enquiry to the visitor's mail client, pre-filled.
     // Deferred to the next tick so the confirmation paints before the mail
     // app opens, and an anchor click keeps this page from unloading.
-    const href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
+    const href = `mailto:${CONTACT.email},${CONTACT.email2}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
     window.setTimeout(() => {
@@ -186,10 +185,10 @@ export default function Contact() {
                         href={`mailto:${CONTACT.email}`}
                       />
                       <ContactRow
-                        icon={<Phone size={17} strokeWidth={1.75} />}
-                        label={t('contactPage.phoneEs')}
-                        value={CONTACT.phoneEs}
-                        href={CONTACT.phoneEsHref}
+                        icon={<Mail size={17} strokeWidth={1.75} />}
+                        label=""
+                        value={CONTACT.email2}
+                        href={`mailto:${CONTACT.email2}`}
                       />
                       <ContactRow
                         icon={<Phone size={17} strokeWidth={1.75} />}

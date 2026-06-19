@@ -17,6 +17,58 @@ type TypeEntry = {
 type Item = { slug: string; title: string; desc: string; types: TypeEntry[] };
 type Group = { name: string; items: Item[] };
 
+// Gallery layouts for the 3 detail shots (gallery[0] is the page hero above).
+// One is picked per subcategory so the grid isn't arranged the same everywhere.
+type ShotSpec = { item: string; frame: string; img: string };
+type Layout = { container: string; shots: ShotSpec[] };
+
+const GALLERY_LAYOUTS: Layout[] = [
+  // Banner on top, then two portraits.
+  {
+    container: 'grid gap-6 md:grid-cols-2',
+    shots: [
+      { item: 'md:col-span-2', frame: '', img: 'aspect-[21/9]' },
+      { item: '', frame: '', img: 'aspect-[4/5]' },
+      { item: '', frame: '', img: 'aspect-[4/5]' },
+    ],
+  },
+  // Two portraits, then a wide banner at the bottom.
+  {
+    container: 'grid gap-6 md:grid-cols-2',
+    shots: [
+      { item: '', frame: '', img: 'aspect-[4/5]' },
+      { item: '', frame: '', img: 'aspect-[4/5]' },
+      { item: 'md:col-span-2', frame: '', img: 'aspect-[16/7]' },
+    ],
+  },
+  // Cinematic strip on top, two squares beneath.
+  {
+    container: 'grid gap-6 md:grid-cols-2',
+    shots: [
+      { item: 'md:col-span-2', frame: '', img: 'aspect-[12/5]' },
+      { item: '', frame: '', img: 'aspect-square' },
+      { item: '', frame: '', img: 'aspect-square' },
+    ],
+  },
+  // Tall feature on the left, two landscapes stacked on the right.
+  {
+    container: 'grid gap-6 md:grid-cols-2 md:grid-rows-2',
+    shots: [
+      { item: 'md:row-span-2', frame: 'md:h-full', img: 'aspect-[4/5] md:aspect-auto md:h-full' },
+      { item: '', frame: '', img: 'aspect-[3/2]' },
+      { item: '', frame: '', img: 'aspect-[3/2]' },
+    ],
+  },
+];
+
+// Stable hash so a subcategory always gets the same layout (no reshuffle on
+// reload), while different elements start from a different offset.
+const hashSlug = (s: string) => {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
+};
+
 export default function TypePage() {
   const { slug, type } = useParams();
   const { t } = useTranslation();
@@ -49,6 +101,9 @@ export default function TypePage() {
   const hero = gallery[0] ?? photos[typeIndex];
   const detailShots = gallery.slice(1);
   const hasGallery = detailShots.length > 0;
+  // Vary the grid per subcategory: siblings of one element step through distinct
+  // layouts (offset by typeIndex), elements start from different offsets (hash).
+  const layout = GALLERY_LAYOUTS[(hashSlug(slug!) + typeIndex) % GALLERY_LAYOUTS.length];
   const photo = hero;
   const siblings = item.types.filter((sibling) => sibling.slug !== entry.slug);
 
@@ -89,24 +144,23 @@ export default function TypePage() {
             the single placeholder until real photos for this kind land. */}
         <section className="px-6 pb-20 lg:px-12 lg:pb-28">
           {hasGallery ? (
-            <div className="grid gap-6 md:grid-cols-2">
-              {detailShots.map((src, i) => (
-                <Reveal
-                  key={src}
-                  delay={0.08 + i * 0.06}
-                  className={i === 0 ? 'md:col-span-2' : ''}
-                >
-                  <div className="overflow-hidden bg-plaster">
-                    <img
-                      src={src}
-                      alt={`${entry.label} — ${i + 1}`}
-                      loading="lazy"
-                      onError={imgFallback(fallback)}
-                      className={`w-full object-cover ${i === 0 ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
-                    />
-                  </div>
-                </Reveal>
-              ))}
+            <div className={layout.container}>
+              {detailShots.map((src, i) => {
+                const spec = layout.shots[i] ?? { item: '', frame: '', img: 'aspect-[4/5]' };
+                return (
+                  <Reveal key={src} delay={0.08 + i * 0.06} className={spec.item}>
+                    <div className={`overflow-hidden bg-plaster ${spec.frame}`}>
+                      <img
+                        src={src}
+                        alt={`${entry.label} — ${i + 1}`}
+                        loading="lazy"
+                        onError={imgFallback(fallback)}
+                        className={`w-full object-cover ${spec.img}`}
+                      />
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-2">

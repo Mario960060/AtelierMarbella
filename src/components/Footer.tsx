@@ -55,16 +55,24 @@ export default function Footer() {
           <p className="text-[11px] uppercase tracking-[0.25em] text-ivory/40">{t('footer.contact')}</p>
           <ul className="mt-4 space-y-2 text-sm text-ivory/75">
             <li>
-              <a href="tel:+34600000000" className="transition-colors hover:text-ivory">
-                +34 600 000 000
+              <a href="tel:+447809418879" className="transition-colors hover:text-ivory">
+                +44 7809 418879
               </a>
             </li>
             <li>
               <a
-                href="mailto:info@ateliermarbella.com"
+                href="mailto:info@atelier-marbella.com"
                 className="transition-colors hover:text-ivory"
               >
-                info@ateliermarbella.com
+                info@atelier-marbella.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:office@atelier-marbella.com"
+                className="transition-colors hover:text-ivory"
+              >
+                office@atelier-marbella.com
               </a>
             </li>
             <li className="text-ivory/50">{t('footer.areas')}</li>
